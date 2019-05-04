@@ -1,0 +1,363 @@
+
+/* Fonts */
+
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir/Vazir.eot');
+    src: url('../fonts/Vazir/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir/Vazir.woff2') format('woff2'),
+         url('../fonts/Vazir/Vazir.woff') format('woff'),
+         url('../fonts/Vazir/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir/Vazir-Bold.eot');
+    src: url('../fonts/Vazir/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir/Vazir-Bold.woff2') format('woff2'),
+         url('../fonts/Vazir/Vazir-Bold.woff') format('woff'),
+         url('../fonts/Vazir/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir/Vazir-Black.eot');
+    src: url('../fonts/Vazir/Vazir-Black.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir/Vazir-Black.woff2') format('woff2'),
+         url('../fonts/Vazir/Vazir-Black.woff') format('woff'),
+         url('../fonts/Vazir/Vazir-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir/Vazir-Medium.eot');
+    src: url('../fonts/Vazir/Vazir-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir/Vazir-Medium.woff2') format('woff2'),
+         url('../fonts/Vazir/Vazir-Medium.woff') format('woff'),
+         url('../fonts/Vazir/Vazir-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir/Vazir-Light.eot');
+    src: url('../fonts/Vazir/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir/Vazir-Light.woff2') format('woff2'),
+         url('../fonts/Vazir/Vazir-Light.woff') format('woff'),
+         url('../fonts/Vazir/Vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir/Vazir-Thin.eot');
+    src: url('../fonts/Vazir/Vazir-Thin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir/Vazir-Thin.woff2') format('woff2'),
+         url('../fonts/Vazir/Vazir-Thin.woff') format('woff'),
+         url('../fonts/Vazir/Vazir-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+*{
+	font-family: Vazir;
+}
+
+body{
+	direction: rtl;
+	font-family: Vazir;
+	text-align: right;
+	overflow-x: hidden;
+}
+
+p{
+	text-align: right;
+}
+
+.section-body{
+	padding: 0;
+}
+
+
+/* Navbar */
+
+.nav-link.waves-effect.waves-light {
+    text-align: right;
+}
+
+
+/* Education */
+
+.fas.fa-share.fa-lg.indigo-text {
+    transform: rotate(180deg);
+}
+
+
+
+.app-farmoon a {
+    font-size: 18px;
+}
+
+/* Rahvar */
+
+
+.alert.alert-primary {
+    text-align: center;
+}
+
+
+.img-kart {
+    text-align: center;
+        margin: 20px;
+}
+
+.img-fluid, .modal-dialog.cascading-modal.modal-avatar .modal-header, .video-fluid {
+ 
+    max-height: 313px;
+}
+
+.help-text p {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.input-code {
+    margin: 0 auto;
+
+}
+
+.pic-captcha {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.input-captcha {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+.md-form label {
+
+    right: 50px;
+ 
+}
+
+
+
+.last-offenses {
+    text-align: center;
+}
+
+.submit-rahvar {
+    text-align: center;
+    margin-top: 45px;
+     margin-bottom: 45px;
+}
+
+.submit-rahvar a {
+    font-size: 18px;
+}
+
+/* Footer */
+
+.spacing.font-weight-bold {
+    text-align: right;
+}
+
+
+.table thead th {
+    border-top: none;
+    text-align: center;
+}
+
+
+/* size fonts */
+
+.nav-link.waves-effect.waves-light {
+    font-size: 16px;
+}
+
+
+
+.img-responsive.center-block {
+    display: block;
+    margin: 0 auto;
+}
+
+#estelam {
+    text-align: center;
+    padding: 21px;
+    font-size: 19px;
+    color: #fff;
+}
+
+
+/* Rahvar */
+
+#capcha {
+    width: 218px !important;
+}
+
+
+
+.posts.blue.fine-inquiry {
+
+    box-shadow: 0 1px 6px rgba(0,0,0,.12), 0 1px 4px rgba(0,0,0,.24);
+}
+
+table th {
+ 
+    text-align: center;
+}
+
+
+table td {
+   
+    text-align: right;
+}
+
+
+input[type=button], input[type=submit] {
+    background-color: #e6e6e6;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    color: #5b5c5c;
+    cursor: pointer;
+     font-family: Vazir,tahoma; 
+    font-size: 24px !important;
+
+}
+
+
+.fine-inquiry .submit {
+    width: 200px !important;
+   
+}
+
+.table-result {
+    margin-top: 25px;
+}
+
+
+.fine-step.one img {
+    display: none;
+}
+
+
+img#ch_capt {
+    display: block;
+    margin: 0 auto;
+}
+
+img#capimg{
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+
+.last-fine {
+    margin-top: 218px;
+}
+
+
+#headingOne {
+    background: #02b1b1;
+    text-align: center;
+    padding: 15px;
+}
+
+#headingOne a {
+    color: #fff;
+}
+
+.box-rahvar {
+    margin-top: 40px;
+}
+
+
+
+#image-help {
+    float: right;
+}
+
+
+.step.description {
+
+    padding-right: 10px;
+}
+
+
+.title>h1 {
+  
+    font-family: Vazir;
+        font-weight: bold;
+}
+
+
+.modal-dialog.modal-notify .heading {
+
+    font-family: Vazir;
+}
+
+
+
+.modal-header .close {
+   
+    margin: 0 !important;
+}
+
+
+#help:hover{
+
+    color: red;
+
+}
+
+.main-page .panel-body p{
+
+    font-weight:bold;
+    font-family:Vazir;
+    font-size: 14px !important;
+}
+
+
+.step.description {
+    font-family: Vazir;
+    font-size: 13px;
+}
+
+
+.fine-inquiry .submit {
+   
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.contain.container-fluid.table-responsive h4 {
+    text-align: center;
+    padding: 50px;
+}
+
+#btn-Protest {
+    margin: 0 auto;
+    background: #02b1b1;
+    color: #fff;
+    text-shadow: none;
+    width: 342px;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.brn-group {
+    text-align: center;
+    margin: 0 auto;
+}

@@ -1,0 +1,126 @@
+*{
+    margin: 0px;
+    clear: inherit;
+    padding: 0px;
+
+}
+
+.contain{
+    max-width: 850px;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+}
+.hi{
+    display: none;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+td{
+    padding: 5px !important;
+}
+th{
+    text-align: right;
+}
+.contentplace {
+    background: #fff;
+}
+#hashtraghami{
+    margin-top: 14px;
+}
+#advformid{
+    padding-top: 10px;
+}
+.contentplace{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: auto;
+    height: auto;
+    margin-right: auto;
+    font-family: 'BTraffic';
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 810px;
+    width: 100%;
+    height: 100%;
+
+    margin-right: auto;
+
+    margin-left: auto;
+    box-shadow: 0 1px 6px rgba(0,0,0,.12),0 1px 4px rgba(0,0,0,.24);
+}
+.fine-inquiry input{padding:0;font-size:16px;letter-spacing:normal;background-color:#fff;
+    box-shadow:0 1px 5px 0 #9e9e9e; margin:26px auto; display:block; direction:ltr}
+.fine-inquiry input:first-child{
+    margin-top: 10px;
+}
+.titlecontainer{
+    text-align: center;
+}
+.contenttxt{
+    font-family: 'BTraffic';
+    font-size: 15px;
+}
+.contentbox{
+    margin-top: 25px;
+    padding: 5px;
+    font-family: 'BTraffic';
+    display: inline-block;
+	
+}
+.contenttitle {
+    display: inline-block;
+    padding: 0 80px 14px;
+    margin: 0;
+    float: none !important;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'BTraffic';
+    color: #57b800;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 10px 15px;
+
+}
+
+.rightside{
+    width: 50%;
+    float: right;
+}
+
+.panel-header{
+    padding: 5px;
+}
+
+.rightside>img{
+    max-height: 370px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    height: auto;
+    color: #000;
+    direction: rtl;
+    line-height: 1.8;
+    color: #2c2c2c;
+}
+
+.leftside{
+    width: 50%;
+    float: right;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    color: #000;
+    direction: rtl;
+    line-height: 1.8;
+    color: #2c2c2c;
+}
+
+
