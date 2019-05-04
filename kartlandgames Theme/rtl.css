@@ -1,0 +1,283 @@
+/* Fonts */
+
+@font-face {
+    font-family: Vazir;
+    src: url('fonts/Vazir/Vazir.eot');
+    src: url('fonts/Vazir/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Vazir/Vazir.woff2') format('woff2'),
+         url('fonts/Vazir/Vazir.woff') format('woff'),
+         url('fonts/Vazir/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('fonts/Vazir/Vazir-Bold.eot');
+    src: url('fonts/Vazir/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Vazir/Vazir-Bold.woff2') format('woff2'),
+         url('fonts/Vazir/Vazir-Bold.woff') format('woff'),
+         url('fonts/Vazir/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url(' fonts/Vazir/Vazir-Black.eot');
+    src: url(' fonts/Vazir/Vazir-Black.eot?#iefix') format('embedded-opentype'),
+         url(' fonts/Vazir/Vazir-Black.woff2') format('woff2'),
+         url(' fonts/Vazir/Vazir-Black.woff') format('woff'),
+         url(' fonts/Vazir/Vazir-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url(' fonts/Vazir/Vazir-Medium.eot');
+    src: url(' fonts/Vazir/Vazir-Medium.eot?#iefix') format('embedded-opentype'),
+         url(' fonts/Vazir/Vazir-Medium.woff2') format('woff2'),
+         url(' fonts/Vazir/Vazir-Medium.woff') format('woff'),
+         url(' fonts/Vazir/Vazir-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url(' fonts/Vazir/Vazir-Light.eot');
+    src: url(' fonts/Vazir/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+         url(' fonts/Vazir/Vazir-Light.woff2') format('woff2'),
+         url(' fonts/Vazir/Vazir-Light.woff') format('woff'),
+         url(' fonts/Vazir/Vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url(' fonts/Vazir/Vazir-Thin.eot');
+    src: url(' fonts/Vazir/Vazir-Thin.eot?#iefix') format('embedded-opentype'),
+         url(' fonts/Vazir/Vazir-Thin.woff2') format('woff2'),
+         url(' fonts/Vazir/Vazir-Thin.woff') format('woff'),
+         url(' fonts/Vazir/Vazir-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+
+*{
+	font-family: Vazir;
+}
+
+body{
+	
+    font-family: Vazir;
+    font-size: 18px;
+
+
+}
+
+.genric-btn.primary {
+    margin: 0 auto;
+}
+.genric-btn.primary:hover {
+    box-shadow: 1px 1px 30px 0px #c576ff;
+}
+
+#mobile-nav ul li a {
+    text-align: right;
+
+}
+
+.footer-area {
+    background-color: #1f0454;
+    padding-top: 0;
+    padding-bottom: 35px;
+}
+
+
+.nav-menu a {
+
+    font-size: 16px;
+  
+}
+
+.home-area-title h1 {
+    font-family: Vazir;
+}
+
+.slider-left {
+    text-align: center;
+}
+
+.slider-area .slider-left p {
+
+    max-width: unset;
+   
+}
+
+.screen-one .screen-left .title,.screen-two .screen-right .title {
+   
+    text-align: right;
+}
+
+.screen-one .screen-left .title span {
+    width: 120px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    bottom: 198px;
+    right: 15px;
+	top: 61px;
+	margin-left:unset;
+}
+
+.screen-two .screen-right .title span {
+    width: 120px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    bottom: 198px;
+    margin-left: unset;
+    right: 14px;
+	top: 61px;
+}
+
+.screen-one .screen-left .main-title {
+    margin-right: 0;
+}
+
+.screen-two .screen-right .main-title {
+    margin-right: 0;
+}
+
+.details-section ul {
+	float:right;
+}
+
+.screen-two .details-section i {
+
+    margin-left: 30px;
+}
+
+.screen-one .details-section i {
+  
+    margin-left: 30px;
+}
+
+.footer-area .footer-bottom p {
+    text-align: right;
+  
+}
+
+.buttons p {
+    text-align: right;
+}
+
+.buttons i {
+    padding-left: 30px;
+	padding-right:0;
+}
+.desc {
+    width: 130px;
+}
+
+.screen-one .details-section li {
+    float: right;
+	    color: #fff
+}
+
+.screen-two .details-section li {
+    margin-bottom: 30px;
+    float: right;
+	    color: #fff
+}
+
+.logo-slider {
+    width: auto !important;
+    margin: 0 auto;
+}
+
+.price-area .text-white {
+    color: #fff;
+    padding: 10px;
+}
+
+.price-area .single-price .price-middle {
+	min-height: 213px;
+}
+
+.game-review-area .single-review {
+	min-height: 240px;
+}
+
+.screen-one .details-section p {
+    text-align: right;
+}
+
+.screen-two .details-section p {
+    text-align: right;
+}
+
+.price-top h4 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.feature-area .single-feature p {
+    max-width: 330px;
+}
+
+.subs {
+    max-width: 710px;
+}
+
+@media only screen and (max-width: 767px){
+    .slider-area .slider-right {
+        display: block;
+    }
+    .slider-left {
+        margin-top: 90px;
+    }
+
+    .section-gap {
+        padding: 30px 0;
+    }
+}
+
+
+@media only screen and (max-width: 468px){
+.screen-one .screen-left .title span {
+    width: 120px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    bottom: 198px;
+    right: 15px;
+    top: 42px;
+    margin-left: unset;
+}
+
+.screen-two .screen-right .title span {
+    width: 120px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    bottom: 198px;
+    margin-left: unset;
+    right: 14px;
+   top: 42px;
+	}
+	
+.slider-area .slider-left p {
+  display:none;
+}
+	
+	.slider-area .slider-left .genric-btn {
+    z-index: 2;
+    margin-top: 20px;
+}
+	
+	.slider-area .owl-carousel .owl-item {
+    height: 733px;
+	}
+	
+}

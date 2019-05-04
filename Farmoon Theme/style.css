@@ -1,0 +1,1077 @@
+/*
+Theme Name: Farmoon 
+Author: Vada
+
+
+/* Fonts */
+@font-face {
+    font-family: IRANSans;
+    src: url('fonts/IRANSans/IRANSansWeb.eot');
+    src: 
+         url('fonts/IRANSans/IRANSansWeb.woff') format('woff'),
+         url('fonts/IRANSans/IRANSans.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+font-family: "FontAwesome";
+font-weight: normal;
+font-style : normal;
+       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
+             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+
+@font-face {
+    font-family: fontawesome;
+    src: url('fonts/fontawesome/fa-solid-900.eot');
+    src: 
+         url('fonts/fontawesome/fa-solid-900.woff') format('woff'),
+         url('fonts/fontawesome/fa-solid-900.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+
+*{
+	font-family: IRANSans;
+}
+
+body{
+	direction: rtl;
+	font-family: IRANSans;
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.0);
+    color: #575757;
+
+}
+
+a{
+    text-decoration: none;
+	color: #02b1b1;
+    
+}
+i {
+    font-family: FontAwesome;
+}
+
+p {
+
+    line-height: 2;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #02b1b1;
+	color: #000;
+}
+
+
+.navbar-brand img {
+    max-height: 48px;
+    max-width: 280px;
+}
+
+
+#navbarResponsive .navbar-nav > li.dropdown:hover > a, 
+#navbarResponsive .navbar-nav > li.dropdown:hover > a:hover,
+#navbarResponsive .navbar-nav > li.dropdown:hover > a:focus {
+       background-color: rgb(2, 166, 172);
+    color: rgb(255, 255, 255);
+}
+li.dropdown:hover > .dropdown-menu {
+   display: block;
+    text-align: right;
+    right: 18px;
+    width: 250px;
+}
+
+
+
+.navbar-nav .dropdown-menu {
+    position: static;
+    float: left;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+	font-weight: bold;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #02b1b1;
+    color: #fff;
+	    padding: 10px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #02b1b1;
+    border-color: #02b1b1;
+}
+
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #068e8e;
+    border-color: #ffffff;
+}
+.app-download-header {
+    margin: 0 auto;
+}
+
+.topsearch {
+    margin-right: 40px;
+    margin-top: 8px;
+}
+
+.nav-link {
+    font-size: 20px;
+    margin-right: 23px;
+}
+
+
+.dropdown-menu li a {
+    padding: 7px;
+}
+
+/* slider */
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    top: 30%;
+}
+
+#carouselHomeSlider .carousel-indicators li{
+	height: 15px;
+    width: 15px;
+}
+.carousel-indicators{
+	    position: absolute;
+  
+    bottom: 30px;
+}
+#carouselHomeSlider .carousel-item {
+  height: 90vh;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+  .section-home{
+
+    padding: 0;
+  }
+  
+  .about-us {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+#main-blog .entry-title {
+   margin-top: 36px;
+    margin-bottom: 36px;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 2;
+}
+
+.ads-farmooon,.ads-farmooon-app{
+    text-align: center;
+	margin-top:30px;
+}
+.ads-farmooon-app img {
+margin-top:30px;
+}
+#services {
+    background-color: #02b1b1;
+}
+
+.services {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #FFFFFF;
+}
+
+section#download-app .container 
+{
+	padding:40px;
+}
+
+.services i{
+    border: 4px solid #e7e7e7;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.services i:hover {
+    opacity: 0.8;
+}
+.blog h2 {
+    text-align: center;
+    padding: 40px;
+	    font-weight: bold;
+	    font-size: 32px;
+}
+
+
+
+/*  testimonials*/
+
+#testimonials {
+    height: 250px;
+}
+
+.testimonials {
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+}
+.testimonials .carousel-indicators {
+    left: 0;
+    top: 100%;
+ 
+
+}
+
+/* The colour of the indicators */
+.testimonials .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    height: 8px;
+}
+
+.testimonials.carousel-indicators .active {
+background: #707070;
+}
+
+
+#download-app {
+    background-color: #02b1b1;
+    color: #fff;
+    padding: 40px;
+}
+
+.widget-car-price {
+    border: none !important;
+    text-align: center;
+}
+
+#table-price-sidebar {
+    margin-top: 40px;
+}
+
+/* footer */
+
+.context-dark, .bg-gray-dark, .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 23px;
+    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+    content: "\f14f";
+    font: 400 21px/1 "Material Design Icons";
+    color: #4d6de6;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -28px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+
+
+.footer-content {
+    height: auto;
+    padding: 20px;
+}
+
+
+.copy-right
+{
+    text-align: center;
+}
+
+
+
+/* single page */
+.bg-titlebar{
+    background-color: #02b1b1;
+}
+.card-img-top {
+   
+    height: auto;
+}
+
+.titlebar .entry-title {
+    color: #fff;
+    padding: 20px;
+	font-size: 32px;
+	    line-height: 1.4;
+}
+  
+
+.thubmnail-single {
+    max-width: 730px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+
+#main-blog .entry-meta {
+    color: #02b1b1;
+    font-weight: 400;
+    padding: 12px 16px!important;
+    margin: 16px 0;
+    border: 1px solid #e7e7e7;
+}
+
+#main-blog .entry-content p {
+    text-align: justify;
+    font-size: 14pt;
+}
+/* Blog */
+
+.section-blog{
+
+    padding: 0;
+  }
+
+
+  /* footer */
+
+  footer h2 {
+    border-bottom: 1px solid #676767;
+    margin-bottom: 17px;
+    color: #fff;
+    font-size: 24px;
+	      padding: 10px;
+}
+
+
+/*  add Custom */
+table{
+	 margin: auto;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+	    direction: rtl;
+}
+
+td {
+ 
+    text-align: right;
+}
+
+
+.sidebar-inner #sidebar li {
+    background-color: #f5f5f5;
+        padding: .4em;
+    border-radius: 5px;
+    margin-bottom: 7px;
+	border-bottom: 1px solid rgba(0,0,0,.075);
+}
+
+#wpp-5 {
+    margin: 2em 0 2.5em !important;
+}
+
+#categories-3 {
+    margin: 0 0 2.5em !important;
+}
+
+.sidebar-inner #sidebar h2 {
+color: #02b1b1;
+    padding: 20px;
+    border-bottom: 1px solid #bbb;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 1.25rem;
+}
+
+.sidebar-inner #sidebar a {
+    color: #303030;
+	    font-size: 15px;
+}
+
+.sidebar-inner #sidebar a:hover {
+    color: #02b1b1;
+}
+
+.social-footer a {
+    display: inline-block;
+    margin-left: 18px;
+}
+
+
+/* PopUp */
+
+.btn-popup {
+    text-align: center;
+    font-size: 14px;
+    background-color: #03bcb4;
+    width: 247px;
+    border-radius: 5px;
+    float: right;
+    padding: 13px;
+    display: inline;
+    margin: 3px;
+}
+
+
+.btn-popup a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-close-popup{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    background-color: #000;
+    float: left;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 10px;
+    opacity: 0.7;
+}
+
+.btn-close-popup a {
+    color: #fff !important;
+	 text-decoration: none;
+}
+
+.tags-links {
+    display: block;
+}
+
+
+.card-text {
+    min-height: 233px;
+   
+}
+
+.rate-post {
+    display: inline-block;
+    float: left;
+}
+
+.instagram-singlePost {
+    display: inline-block;
+}
+
+.instagram-singlePost .btn-info {
+    color: #fff;
+    background-color: #b81770;
+    border-color: #17a2b8;
+}
+
+
+.post-arshive {
+    padding-bottom: 20px;
+	    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+/* Slider */
+.n2-ss-layer .n2-font-025da568e74da2cf8e22911b97ad613b-hover {
+    font-family: Vazir !important;
+    font-size: 70px !important;
+}
+ .n2-ss-layer .n2-font-0c67ffb94c0e569285265e45500d0ba6-paragraph {
+    font-family: Vazir !important;
+    font-size: 22px !important;
+	
+}
+
+
+div#n2-ss-2 .n2-ss-button-container a div{
+  font-family: Vazir !important;
+    font-size: 21px !important;	
+}
+
+div#n2-ss-2 .n2-font-1103-link a{
+	    border-radius: 10px;
+}
+
+#download-app a {
+    font-size: 18px;
+    padding: 10px;
+	    font-weight: bold;
+}
+
+#blog {
+   
+    background-color: rgba(232, 232, 232, 1);
+}
+
+
+.entry-content img {
+      max-width: 710px;
+    height: auto;
+}
+
+.card-body h3 {
+       font-size: 18px;
+    min-height: 55px;
+    font-weight: bold;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+	margin-bottom: 45px;
+	font-weight: bold;
+    
+}
+
+#services h3 {
+    margin-bottom: 24px;
+}
+
+.social-footer i:hover {
+    color: #02b1b1;
+}
+
+
+#download-app .btn-info {
+  color: #02b1b1;
+    background-color: #ffffff;
+    border-color: #17a2b8;
+}
+
+#download-app .btn-info:hover {
+    color: #fff;
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+/* Arshive */
+.post-arshive .entry-meta {
+    font-size: 12px;
+    margin-bottom: 20px;
+	    min-height: 110px;
+}
+.post-arshive h3 {
+	    font-size: 21px;
+   min-height: 50px;
+	
+}
+
+.dark-grey-tex.excerpt-content {
+    min-height: 145px;
+}
+
+.ads-question {
+    text-align: center;
+}
+
+
+.post-title a {
+    color: #000;
+}
+
+.post-title a:hover {
+    color: #02b1b1;
+}
+.arshive-post-title h3 {
+    color: #000;
+	line-height:1.4;
+}
+.arshive-post-title h3:hover {
+    color: #02b1b1;
+}
+.post-more {
+    text-align: center;
+}
+
+
+
+.entry-content p {
+    line-height: 2;
+}
+
+.entry-meta a {
+    color: #a6a6a6;
+	    font-size: 14px;
+}
+
+.entry-meta a:hover {
+    color: #02b1b1;
+}
+
+.single-post-thumbnail {
+    text-align: center;
+}
+
+.entry-content img {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+#about-us h1 {
+    font-size: 42px;
+    font-weight: bold;
+	    margin-bottom: 30px;
+}
+
+.entry-meta i {
+    color: #02b1b1;
+}
+
+.tags-links {
+    color: #a2a2a2;
+}
+
+#wpcomm .wc-load-more-submit {
+ 
+    font-family: IRANSans !important;
+}
+
+/* css Plugin */
+
+ .centered-text {
+
+    float: right !important;
+}
+
+.ctaButton {
+
+    position: absolute;
+    top: 0;
+    left: 0 !important;
+    transform: rotate(180deg);
+}
+
+.related-post {
+    display: block;
+    margin-top: 90px;
+	    margin-bottom: 50px;
+	text-align:center;
+	
+}
+
+
+
+.related-post h3 {
+      text-align: right;
+    background-color: #02b1b1;
+    border: 1px solid #e7e7e7;
+    color: #fff;
+    font-size: 21px;
+    padding: 5px;
+}
+.textwidget a:hover {
+    color: #02b1b1;
+}
+
+.dropdown-toggle::after {
+    margin-right: 0.6em;
+
+}
+
+#services h2 {
+margin-bottom: 40px;
+    font-weight: bold;
+}
+
+#testimonials h2 {
+    margin-bottom: 32px;
+    font-weight: bold;
+}
+
+#download-app h2 {
+    font-weight: bold;
+}
+
+/* misha_loadmore */
+.misha_loadmore{
+	background-color: #ddd;
+	border-radius: 2px;
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 800;
+	letter-spacing:1px;
+	cursor:pointer;
+	text-transform: uppercase;
+	padding: 10px 0;
+	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;  
+}
+.misha_loadmore:hover{
+	background-color: #767676;
+	color: #fff;
+}
+
+.baner-ads-top {
+    text-align: center;
+    padding: 10px;
+   
+}
+
+.entry-content h2 {
+    font-size: 24px;
+	line-height: 2;
+}
+
+.caption-brand {
+    position: absolute;
+    bottom: 0;
+    background: #de4747;
+    color: #f1f1f1;
+    width: 92%;
+    transition: .5s ease;
+    opacity: 0;
+    color: #fff;
+    font-size: 22px;
+    padding: 4px;
+    text-align: center;
+}
+
+.brand-car:hover .caption-brand{
+	    opacity: 1;
+	transition: .5s ease;
+
+}
+
+    .brand-car {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+.table-responsive {
+    display: inline-table;
+	width:100% !important;
+ 
+}
+
+
+@media only screen and (max-width:320px){
+
+.star-app {
+    display: none;
+}
+}
+
+@media only screen and (max-width : 468px)
+{
+	.entry-content img {
+    width:100%;
+    height: auto;
+}
+	
+		.entry-content a img {
+    width:50%;
+    height: auto;
+}
+	
+	.table-responsive {
+    display:block;
+ 
+}
+	
+	.thubmnail-single {
+     width:100%;
+		height: auto;
+}
+	
+	#carouselHomeSlider .carousel-item {
+    height: 75vh;
+
+}
+	
+	.carousel-caption {
+    position: absolute;
+    right: 15%;
+    top: 2%;
+}
+	
+	.baner-ads-top img {
+  
+    width: 100%;
+}
+	
+	.app-download-review strong {
+    font-size: 12px;
+}
+}
+@media only screen and (max-width : 768px)
+{
+.thubmnail-single {
+    height: auto;
+    width: 100%;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+	.ads-question img{
+		width:100%;
+	}
+	
+
+}
+@media only screen and (max-width : 1024px)
+{
+	
+	.entry-content img {
+    width: 100%;
+}
+	
+}
+
+.entry-content .wp-caption {
+    width: 100% !important;
+}
+
+.mobile-menu{
+    display: none;
+}
+@media only screen and (min-width: 800px){
+    .desktop-menu{
+        display: block !important;
+    }
+    .mobile-menu{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 799px){
+    .desktop-menu{
+        display: none !important;
+    }
+    .mobile-menu{
+        display: block !important;
+    }
+}
+
+/* PopUp */
+.img-popup img {
+    width: 100%;
+    height: auto;
+}
+@media only screen and (max-width : 468px){
+	#btn-close-popup {
+    text-align: center;
+    font-size: 13px;
+    width: 100%;
+    border-radius: 5px;
+    float: right;
+    margin: 0 auto;
+    padding: 10px;
+    display: inline;
+}
+	
+	.btn-popup {
+
+    width: 100% !important;
+
+}
+	.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    z-index: 1020;
+		display:none;
+}
+	
+	
+.single-post-thumbnail {
+	margin-top:70px;
+}
+
+	.ads-farmooon img {
+    width: 100%;
+}
+	
+	.ads-farmooon-app img {
+    width: 100%;
+    margin-top: 30px;
+}
+	.baner-ads-top {
+    text-align: center;
+    position: sticky;
+    top: 103px;
+    z-index: 99999;
+    padding: 0;
+}
+	.cbp-spmenu-push.cbp-spmenu-push-toleft .baner-ads-top {
+    display: none;
+}
+	.app-download-review
+{
+	display: block !important;
+    position: fixed;
+	   top: 42px;
+    z-index:9999;
+	    width: 100%;
+}
+	.app-download-header-review {
+    float: left;
+}
+
+
+	
+.alert-warning {
+    color: #ffffff;
+    background-color: #353535;
+    border-color: #353535;
+    height: 60px;
+}
+	
+	.col-md-4.footer-col {
+    margin: 12px;
+    margin-bottom: 20px;
+}
+
+	
+	#carouselHomeSlider {
+    margin-top: 60px;
+}
+	
+	#wprmenu_bar .bar_logo {
+   
+    width: 130px !important;
+    height: 33px !important;
+}
+	.bg-titlebar{
+
+		margin-top: 60px;
+}
+	#arshive h2 {
+    padding-top: 20px;
+}
+	
+#testimonials {
+    height: auto !important;
+}
+	
+}
+
+@media only screen and (max-width : 1280px){
+.thubmnail-single {
+    width: 100%;
+ 
+}
+	
+	.ads-question img {
+    width: 100%;
+}
+}
+
+.related-post .col-lg-3.col-md-3.col-xs-12.mb-lg-0.mb-4 {
+    float: right;
+}
+
+.u6dacf2eeea40239e98ff5b743efdde95 .u6dacf2eeea40239e98ff5b743efdde95-content {
+  
+    padding-right: 20px !important;
+}
+
+.sgpb-main-html-content-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entry-content ul {
+    list-style: inside;
+}
+
+.entry-content ul li {
+    font-size: 14pt;
+}
+
+
+.app-download-review
+{
+	display:none;
+}
+/* Convas */
+
+.convas {
+    margin: 0 auto;
+}
+
+.estelam-khalafi .panel-heading {
+    background-color: #02b1b1;
+    color: #fff;
+}
+
+.estelam-khalafi {
+    text-align: center;
+}
+
+.estelam-khalafi .panel {
+    margin: 24px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+.estelam-khalafi .panel-title {
+    padding: 10px;
+}
+
+
+li#table-price-sidebar .btn-price-sidebar {
+    text-align: center;
+}
+
+li#table-price-sidebar .btn-price-sidebar a {
+    color: #fff;
+}
+
+.sidebar-inner #sidebar li:last-child {
+    border: none;
+}
+
+.brand-car {
+    padding: 10px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+}
+
+.brand-car:hover {
+    opacity: 0.7;
+}
