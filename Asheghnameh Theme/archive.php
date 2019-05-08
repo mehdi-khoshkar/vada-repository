@@ -15,29 +15,30 @@
 
   <!-- Grid row -->
   <div class="row">
-	  <?php
-	  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
- 	  	$args = array('posts_per_page' => 9,'paged' => $paged);
-			
-		$loop = new WP_Query( $args ); 
-	  
-	  ?>
-<?php if ( $loop->have_posts() ) : ?>
-    <?php while ($loop->have_posts() ) : $loop->the_post(); ?>
+<?php if ( have_posts() ) : ?>
+    <?php while (have_posts() ) : the_post(); ?>
     <!-- Grid column -->
     <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
 
       <!-- Featured image -->
 		<a href="<?php the_permalink(); ?>" >
       <div class="view overlay rounded z-depth-2 mb-4">
-        
-       <img class="card-img-top" src="https://asheghnameh.com/wp-content/uploads/2019/04/daily-fal.jpg" alt="Sample image"> 
+        <?php if(is_category( 'فال روزانه' )){ ?>
+          <img class="card-img-top" src="https://asheghnameh.com/wp-content/uploads/2019/04/daily-fal.jpg" alt="فال روزانه"> 
 
 		 
      
           <div class="mask rgba-white-slight"></div>
-       
+        <?php } else { ?>
+
+        <img class="card-img-top" src="https://asheghnameh.com/wp-content/uploads/2019/05/pmc-fal-compressor.png" alt="فال pmc"> 
+
+		 
+     
+<div class="mask rgba-white-slight"></div>
+
+        <?php } ?>
       </div>
  </a>
    
@@ -59,10 +60,13 @@
     <!-- Grid column -->
 
    <?php endwhile; ?>
+	  <?php the_posts_pagination(   array(
+                'mid_size'           => 1,
+                'prev_text'          => _x( 'Previous', 'previous set of posts' ),
+                'next_text'          => _x( 'Next', 'next set of posts' ),
+                'screen_reader_text' => __( ' ' ),
+            )); ?>
 	  
-    <nav class="pagination">
-        <?php pagination_bar( $loop ); ?>
-    </nav>
 <?php wp_reset_postdata();?>
 	  
 	  <?php else : ?>

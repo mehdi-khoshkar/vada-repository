@@ -19,12 +19,21 @@
 
         <!-- Card image -->
         <div class="view overlay">
-       <img class="card-img-top" src="https://asheghnameh.com/wp-content/uploads/2019/04/daily-fal.jpg" alt="Sample image"> 
+        <?php if(in_category( 'فال روزانه' )){ ?>
+       <img class="card-img-top" src="https://asheghnameh.com/wp-content/uploads/2019/04/daily-fal.jpg" alt="فال روزانه"> 
 
 			
           <a href="#!">
             <div class="mask rgba-white-slight"></div>
           </a>
+        <?php } else {?>
+    <img class="card-img-top" src="https://asheghnameh.com/wp-content/uploads/2019/05/pmc-fal-compressor.png" alt="فال pmc"> 
+
+			
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        <?php } ?>
         </div>
 
         <!-- Card content -->

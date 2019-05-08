@@ -1,25 +1,36 @@
 <?php get_header();  ?>
 
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize-loader.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main-loader.css">
+	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr-2.6.2.min.js"></script>
+
 <div class="container">
 
+
+
 <!-- Section: Blog v.4 -->
-<section class="section-single-falehafez">
+<section class="section-single-faletarot">
 
   <!-- Grid row -->
   <div class="row">
 
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
     <!-- Grid column -->
     <div class="col-md-12">
-<!-- 		<div class="btn-single-hafez">
-			<a href="https://asheghnameh.com/?page_id=1622" class="btn btn-download  white-text font-weight-bold wow fadeIn waves-effect waves-light" data-wow-delay="0.3s"  style="visibility: visible; animation-name: fadeIn; animation-delay: 0.3s;">فال حافظ صوتی</a>
-		</div> -->
+
 
       <!-- Card -->
       <div class="card card-cascade wider reverse">
-
+      <?php if (have_posts() ) : ?>
         <!-- Card image -->
         <div class="view view-cascade overlay">
-          <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/falehafez.jpg" alt="Sample image">
+        <?php the_post_thumbnail(); ?>
           <a href="#!">
             <div class="mask rgba-white-slight"></div>
           </a>
@@ -27,15 +38,8 @@
 
         <!-- Card content -->
         <div class="card-body card-body-cascade text-center">
-			<?php
-			
-			$post_tags = get_the_tags();
-			 $postid = get_the_ID(); 
-			$args = array('post_type' => 'falehafez');
-			
-			$loop = new WP_Query( $args ); 
-			?>
-<?php if ( $loop->have_posts() ) : ?>
+	
+
    
       
 
@@ -75,14 +79,7 @@
 
 	
 		   	      
-	  <div class="previous_post">
-		  	  <button type="button" class="btn purple-gradient"><?php previous_post_link(); ?> </button>
 
-	  </div>
-	
-	  <div class="next_post">
-	   <button type="button" class="btn purple-gradient"> <?php next_post_link(); ?> </button>
-	  </div>
 
 			
 			
@@ -96,6 +93,11 @@
               <span class="clearfix  d-md-inline-block">اشتراک در تلگرام</span>
             </a>
  
+	
+	 <a class="btn purple-gradient my-0 waves-effect waves-light"  href="https://asheghnameh.com/%D9%81%D8%A7%D9%84-%D8%AA%D8%A7%D8%B1%D9%88%D8%AA-%DB%8C%DA%A9-%DA%A9%D8%A7%D8%B1%D8%AA%DB%8C/">
+              <i class="fab fa-phoenix-framework pr-2"></i>
+              <span class="clearfix  d-md-inline-block">فال تاروت جدید</span>
+            </a>
 			  
            
         
@@ -132,7 +134,7 @@
 	<?php endif; ?>
 </div>
 
-<?php echo do_shortcode('[sg_popup id=1938]'); ?>
 
+<script src="<?php echo get_template_directory_uri(); ?>/js/main-loader.js"></script>
 
 <?php  get_footer(); ?>

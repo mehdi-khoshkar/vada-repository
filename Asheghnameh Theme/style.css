@@ -224,6 +224,22 @@ background: #884bdf !important;
     line-height: 7.6;
 }
 
+section.fale-tarot {
+    padding: 10px;
+    margin-top: 100px;
+}
+
+
+
+.fale-tarot.card.collection-card {
+    margin-bottom: 30px;
+}
+
+
+section.fale-tarot img {
+    margin: 0 auto;
+}
+
 .h3-responsive {
     font-size: 48px;
     font-weight: bold;
@@ -289,6 +305,10 @@ section#review-fal {
 }
 
 
+section.section-single-faletarot {
+    margin-top: 90px;
+}
+
 .modal-dialog.modal-notify .heading {
 
     margin: 0 auto;
@@ -339,11 +359,29 @@ section#review-fal a {
 }
 
 
+.section-single-Getfaletarot img{
+	margin:0 auto;
+}
+
+section.section-single-Getfaletarot {
+    margin-top: 90px;
+}
+
+section.section-single-Getfaletarot .col-md-4 {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)!important;
+}
+
+.section-single-faletarot .view.view-cascade.overlay {
+    box-shadow: none !important;
+    margin: 0 auto;
+}
+
 .card-body.card-body-cascade.text-center h2 {
     line-height: 2;
 }
 
 .page-numbers.current {
+	
     width: 60px;
     background-color: #ff3547;
     -webkit-transition: all .3s linear;
@@ -357,6 +395,7 @@ section#review-fal a {
 }
 
 .page-numbers {
+	padding:10px;
     opacity: 0.8;
     width: 60px;
     background-color: #fb397d;
