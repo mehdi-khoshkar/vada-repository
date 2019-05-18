@@ -1,4 +1,4 @@
-<?php /* Template Name: FaleHafez Random */ ?>
+<?php /* Template Name: Fale Ghahve Random */ ?>
 
 <?php get_header();  ?>
 
@@ -24,10 +24,6 @@
     <!-- Grid column -->
     <div class="col-md-12">
 
-<!-- 				<div class="btn-single-hafez">
-			<a href="https://asheghnameh.com/?page_id=1622" class="btn btn-download  white-text font-weight-bold wow fadeIn waves-effect waves-light" data-wow-delay="0.3s"  style="visibility: visible; animation-name: fadeIn; animation-delay: 0.3s;">فال حافظ صوتی</a>
-		</div> -->
-		
       <!-- Card -->
       <div class="card card-cascade wider reverse">
 
@@ -41,25 +37,32 @@
 
         <!-- Card content -->
         <div class="card-body card-body-cascade text-center">
-			<?php
+     <?php
 			
-			
-		// Query random posts
+			$NfaleGhahve = filter_input(INPUT_GET, 'faleGhahve');
+		
+								// Query  posts
 		$the_query = new WP_Query( array(
-			'post_type'      => 'falehafez',
+			'post_type'      => 'faleghahve',
 			'orderby'        => 'rand',
-			'posts_per_page' => 1,
-		) ); ?>
+			'posts_per_page' => $NfaleGhahve,
+	
+			
 
+		) );
+			
+			?>
 		<?php
 		// If we have posts lets show them
 		if ( $the_query->have_posts() ) : ?>
    	<?php
+			
+
 			// Loop through the posts
 			while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
       
 	<!-- Central Modal Medium Success -->
-<div class="modal fade" id="centralModalSuccessOmen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="centralModalSuccessTabir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-notify modal-success" role="document">
     <!--Content-->
@@ -94,33 +97,8 @@
 			
           <!-- Title -->
           <h2 class="font-weight-bold"><a><?php the_title();?> </a></h2>
-			<p class="number_id">
-			<?php 
-			global $post;
- $current_post = $post; // remember the current post
-      for($i = 1; $i <= 7; $i++):
-        $post = get_next_post(); // this uses $post->ID
-
-          // do your stuff here       
-       
-          the_id();
-          
-
-       endfor;
-       
-       
-        ?>
-     </p>
-      <?php 
-			 
-       $Response = $post->ID;
- 
-			$ShahedFAl_ID = $Response ;
+	
 			
-			?>
-			
-						
-
 
         </div>
         <!-- Card content -->
@@ -133,7 +111,8 @@
                <?php  the_content(); ?>
 
       </div>
-
+  
+	
     </div>
     <!-- Grid column -->
 
@@ -149,7 +128,12 @@
 	
 
 		
+	<div class="card-body card-body-cascade text-center">
+			   
+      
+   <?php the_tags( 'برچسب ها: ', ', ' ); ?>
 
+        </div>
 	
 <div class="card-body card-body-cascade text-center">
 			
@@ -172,8 +156,7 @@
       <div class="modal-body">
         <div class="text-center">
           <img src="https://asheghnameh.com/wp-content/uploads/2019/04/icone-falhafez.png" />
-          <p>
-			   ای حافظ شیرازی! تو محرم هر رازی! تو را به خدا و به شاخ نباتت قسم می دهم که هر چه صلاح و مصلحت می بینی برایم آشکار و آرزوی مرا براورده سازی. ضمن اینکه شاید بهتر باشد برای شادی روح حافظ، صلوات یا فاتحه ای نثار نماییم!
+          <p> ای حافظ شیرازی! تو محرم هر رازی! تو را به خدا و به شاخ نباتت قسم می دهم که هر چه صلاح و مصلحت می بینی برایم آشکار و آرزوی مرا براورده سازی. ضمن اینکه شاید بهتر باشد برای شادی روح حافظ، صلوات یا فاتحه ای نثار نماییم!
 			</p>
         </div>
       </div>
@@ -198,13 +181,10 @@
 			  
 			 
          
-			  <button type="button" class="btn pink-gradient white-text waves-effect waves-light" data-toggle="modal" data-target="#centralModalSuccessOmen">
+			  <button type="button" class="btn pink-gradient white-text waves-effect waves-light" data-toggle="modal" data-target="#centralModalSuccessTabir">
 				  <i class="fab fa-phoenix-framework pl-2"></i>تعبیر فال</button>
-
-			  <a href="https://asheghnameh.com/shahed-fal/?Fal_ID=<?php echo $ShahedFAl_ID; ?>" class="btn btn-gplus waves-effect waves-light"  rel="nofollow">
-              <i class="fab fa-phoenix-framework pr-2"></i>
-              <span class="clearfix  d-md-inline-block"> شاهد فال</span>
-            </a>
+			  
+		
 		
             
 
@@ -226,22 +206,18 @@
 			
          
 			
-         
+         <?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
 
 
         </div>
-  
-	<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
+
 	
 	<?php endif; ?>
+	
 </div>
 
-<?php
-// Use shortcodes in form like Landing Page Template.
-echo do_shortcode( '[sg_popup id=1938]' );
 
-?>
 <?php  get_footer(); ?>
 
 

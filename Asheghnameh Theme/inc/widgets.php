@@ -14,3 +14,22 @@ function wpb_image_editor_default_to_gd( $editors ) {
     return $editors;
 }
 add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
+
+
+/**
+ * Add a sidebar.
+ */
+function wpdocs_theme_slug_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'سایدبار بلاگ', 'textdomain' ),
+        'id'            => 'sidebar-blog',
+        'description'   => __( 'سایدبار کناری صفحات.', 'textdomain' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'wpdocs_theme_slug_widgets_init' );
+
+

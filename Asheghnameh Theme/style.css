@@ -457,7 +457,6 @@ section.section-single-Getfaletarot .col-md-4 {
 
 .section-single-falehafez .content-excerpt {
     background-position: center center;
-    background-repeat: no-repeat;
     background-image: url(https://asheghnameh.com/wp-content/themes/Omen/img/bg-contentFal.jpg);
 }
 
@@ -466,7 +465,9 @@ section.section-single-Getfaletarot .col-md-4 {
 {
 	z-index: 9999999;
     float: left;
-    margin: 15px;
+    margin: 0;
+    max-height: 50px;
+    font-size: 14px;
 }
 /* logo */
 
@@ -659,6 +660,42 @@ section.section-single-falehafez img {
 	.card-img-top {
     width: 100% !important;
 	}
+	
+	
+	
+/* 	remove slider in mobile */
+	
+section#slider {
+    display: none;
+    }
+	
+	section#features {
+    display: none;
+}
+	
+	.streak.streak-photo.streak-long-2.rgba-gradient {
+    display: none;
+}
+	
+	section#about {
+    margin-top: 90px;
+}
+	
+	section#review-fal a {
+    color: #fff;
+    font-size: 12px;
+}
+	.card-body.pb-0 {
+    padding: 0;
+}
+	
+	a.btn-mobile
+	{
+		display:block !important;
+			width: 70%;
+		margin: 0 auto;
+		font-size: 16px;
+	}
 }
 
 
@@ -746,4 +783,93 @@ h2.font-weight-bold {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;
+}
+
+
+a.btn-mobile
+{
+	display:none;
+}
+
+
+.section-single-faleghahve.content-excerpt {
+    width: max-content;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.section-single-faleghahve{
+	margin-top:90px;
+}
+
+.section-single-faleghahve .card .view img, .view video {
+    max-height: 400px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.section-single-faleghahve .card.card-cascade .view.view-cascade{
+	box-shadow:none;
+}
+
+
+section.fale-shame {
+    margin-top: 90px;
+}
+
+section.fale-shame img {
+    margin: 0 auto;
+}
+
+section.section-single-faleShame {
+    margin-top: 60px;
+}
+
+section.section-single-faleShame img.card-img-top {
+    width: auto;
+    
+    margin: 0 auto;
+}
+
+.section-single-faleShame .view {
+	box-shadow: none !important;
+
+}
+
+
+.section-single-faleShame .card-body.text-center img {
+    height: 100px;
+}
+
+section.section-single-faleshame {
+    margin-top: 90px;
+}
+
+
+.sidebar-inner #sidebar li {
+    background-color: #f5f5f5;
+    padding: .4em;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid rgba(0,0,0,.075);
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-inner #sidebar h2 {
+   
+    padding: 20px;
+    border-bottom: 1px solid #bbb;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 1.25rem;
+}
+
+.sidebar-inner #sidebar li:last-child {
+    border: none;
 }

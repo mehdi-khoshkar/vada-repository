@@ -10,7 +10,7 @@
   <div class="row">
 
     <!-- Grid column -->
-    <div class="col-md-12">
+    <div class="col-lg-8 col-md-8 col-xs-12">
 <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
 		
@@ -61,6 +61,10 @@
     </div>
     <!-- Grid column -->
 
+	<div class="col-lg-4 col-md-4 col-xs-12">
+     <?php get_sidebar(); ?>
+</div>
+
   </div>
   <!-- Grid row -->
 
@@ -92,8 +96,11 @@
 	
 	  <?php endwhile; ?>
 <?php endif; ?>
+	
+
 
 </div>
+
 
 <?php echo do_shortcode('[sg_popup id=1938]'); ?>
 

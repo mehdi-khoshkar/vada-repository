@@ -9,7 +9,7 @@
 
 
 <!-- Section: Blog v.4 -->
-<section class="section-single-faleshame">
+<section class="section-single-faletarot">
 
   <!-- Grid row -->
   <div class="row">
@@ -96,7 +96,7 @@
 	
 	 <a class="btn purple-gradient my-0 waves-effect waves-light"  href="https://asheghnameh.com/%D9%81%D8%A7%D9%84-%D8%AA%D8%A7%D8%B1%D9%88%D8%AA-%DB%8C%DA%A9-%DA%A9%D8%A7%D8%B1%D8%AA%DB%8C/">
               <i class="fab fa-phoenix-framework pr-2"></i>
-              <span class="clearfix  d-md-inline-block">فال تاروت جدید</span>
+              <span class="clearfix  d-md-inline-block">فال قهوه جدید</span>
             </a>
 			  
            

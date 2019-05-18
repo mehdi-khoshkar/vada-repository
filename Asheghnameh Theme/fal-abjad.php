@@ -32,6 +32,10 @@ section#fale-abjad {
     margin: 20px;
 }
 
+.card-title {
+    text-align: center;
+}
+
 @media screen and (min-width: 768px){
 .table-responsive{
     display:inline-table;

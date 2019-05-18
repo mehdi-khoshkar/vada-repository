@@ -78,7 +78,7 @@
       <!-- Card -->
 
       <!-- Excerpt -->
-      <div class="mt-5 content-excerpt">
+      <div class="content-excerpt">
                <?php  the_content(); ?>
 
       </div>

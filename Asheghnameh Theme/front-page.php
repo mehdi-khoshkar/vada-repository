@@ -94,6 +94,8 @@
 				با اپلیکیشن عاشقنامه به راحتی فال حافظ بگیرید و تفسیرش رو بخونید. انواع طالع‌بینی و فال‌های مختلف از فال ماه تولد تا تست‌های مختلف سنجش عشق در رابطه و  خیلی چیزهای دیگه
 
 				</h3>
+				
+				<a href="http://uzee.ir/asheghnamehsite" class="btn btn-download btn-mobile white-text font-weight-bold wow fadeIn waves-effect waves-light" data-wow-delay="0.3s" onclick="return gtag_report_conversion('http://uzee.ir/asheghnamehsite');" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.3s;">دانلود مستقیم عاشقنامه</a>
 				<hr>
 			</section>
 			
@@ -311,7 +313,7 @@
 <div class="row text-center">
 
   <!-- Grid column -->
-  <div class="col-lg- col-md-3 mb-lg-0 mb-4">
+  <div class="col-lg- col-md-3 col-6 mb-lg-0 mb-4">
     <!--Featured image-->
 <!--       <a href="https://asheghnameh.com/category/%D9%81%D8%A7%D9%84-%D8%B1%D9%88%D8%B2%D8%A7%D9%86%D9%87/">
       <img src="https://asheghnameh.com/wp-content/uploads/2019/04/fal-day-icone.png" class="img-fluid" >
@@ -328,7 +330,7 @@
   <!-- Grid column -->
 
   <!-- Grid column -->
-  <div class="col-lg-3 col-md-6 mb-md-0 mb-3">
+  <div class="col-lg-3 col-md-3 col-6 mb-md-0 mb-3">
     <!--Featured image-->
 <!--       <a href="https://asheghnameh.com/%d9%81%d8%a7%d9%84-%d8%ad%d8%a7%d9%81%d8%b8-%d8%a2%d9%86%d9%84%d8%a7%db%8c%d9%86-%d8%aa%d9%81%d8%b3%db%8c%d8%b1-%da%a9%d8%a7%d9%85%d9%84-%d8%ba%d8%b2%d9%84%db%8c%d8%a7%d8%aa/">
       <img src="https://asheghnameh.com/wp-content/uploads/2019/04/icone-falehafezNew.png" class="img-fluid">
@@ -347,7 +349,7 @@
   <!-- Grid column -->
 
   <!-- Grid column -->
-  <div class="col-lg-3 col-md-3">
+  <div class="col-lg-3 col-md-3 col-6">
     <!--Featured image-->
 <!--       <a href="https://asheghnameh.com/%d9%81%d8%a7%d9%84-%d8%a7%d9%86%d8%a8%db%8c%d8%a7-%d9%88-%d8%aa%d9%81%d8%b3%db%8c%d8%b1-%d8%a2%d9%86/">
       <img src="https://asheghnameh.com/wp-content/uploads/2019/04/icone-falanbiya.png" class="img-fluid" >
@@ -363,7 +365,7 @@
   </div>
   <!-- Grid column -->
 	
-  <div class="col-lg-3 col-md-3">
+  <div class="col-lg-3 col-md-3 col-6">
     <!--Featured image-->
 <!--       <a href="https://asheghnameh.com/%d9%81%d8%a7%d9%84-%d8%a7%d9%86%d8%a8%db%8c%d8%a7-%d9%88-%d8%aa%d9%81%d8%b3%db%8c%d8%b1-%d8%a2%d9%86/">
       <img src="https://asheghnameh.com/wp-content/uploads/2019/04/icone-falanbiya.png" class="img-fluid" >
@@ -379,7 +381,7 @@
   </div>
   <!-- Grid column -->
 	
-	  <div class="col-lg-3 col-md-3">
+	  <div class="col-lg-3 col-md-3 col-6">
     <!--Featured image-->
 <!--       <a href="https://asheghnameh.com/%d9%81%d8%a7%d9%84-%d8%a7%d9%86%d8%a8%db%8c%d8%a7-%d9%88-%d8%aa%d9%81%d8%b3%db%8c%d8%b1-%d8%a2%d9%86/">
       <img src="https://asheghnameh.com/wp-content/uploads/2019/04/icone-falanbiya.png" class="img-fluid" >
@@ -391,6 +393,25 @@
 <!--       <h4 class="font-weight-bold my-3">فال انبیا</h4>
      -->
       <a class="btn purple-gradient btn-sm" href="https://asheghnameh.com/%d9%81%d8%a7%d9%84-%d8%aa%d8%a7%d8%b1%d9%88%d8%aa/"> فال تاروت  </a>
+    </div>
+  </div>
+  <!-- Grid column -->
+	
+	
+	  <!-- Grid column -->
+	
+	  <div class="col-lg-3 col-md-3 col-6">
+    <!--Featured image-->
+<!--       <a href="https://asheghnameh.com/%d9%81%d8%a7%d9%84-%d8%a7%d9%86%d8%a8%db%8c%d8%a7-%d9%88-%d8%aa%d9%81%d8%b3%db%8c%d8%b1-%d8%a2%d9%86/">
+      <img src="https://asheghnameh.com/wp-content/uploads/2019/04/icone-falanbiya.png" class="img-fluid" >
+      </a> -->
+	        <img src="https://asheghnameh.com/wp-content/uploads/2019/05/abjad.png" class="img-fluid" >
+
+    <!--Excerpt-->
+    <div class="card-body pb-0">
+<!--       <h4 class="font-weight-bold my-3">فال انبیا</h4>
+     -->
+      <a class="btn purple-gradient btn-sm" href="https://asheghnameh.com/%d9%81%d8%a7%d9%84-%d8%a7%d8%a8%d8%ac%d8%af/"> فال ابجد  </a>
     </div>
   </div>
   <!-- Grid column -->
