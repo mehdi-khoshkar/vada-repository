@@ -5,7 +5,7 @@
         init : function(ed, url) {
 
             //add new button     
-            ed.addButton("fal", {
+            ed.addButton("farmooon", {
                 title : "لینک فال حافظ",
                 cmd : "fal_command",
                 image : "https://asheghnameh.com/wp-content/uploads/2019/04/fallehafez.png"
