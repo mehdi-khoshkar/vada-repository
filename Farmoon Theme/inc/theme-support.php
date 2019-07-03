@@ -1,7 +1,7 @@
 <?php
 function omen_register_nav_menu() {
     register_nav_menu('primary','Header navigation menu');
-    register_nav_menu('Footer','footer navigation menu');
+    register_nav_menu('footer','footer navigation menu');
 }
 add_action('after_setup_theme','omen_register_nav_menu');
 
@@ -229,3 +229,52 @@ function mind_defer_scripts( $tag, $handle, $src ) {
     return $tag;
 } 
 add_filter( 'script_loader_tag', 'mind_defer_scripts', 10, 3 );
+
+
+
+
+/**
+ * @param $formName string
+ * @param $fieldName string
+ * @param $fieldValue string
+ * @return bool
+ */
+function is_already_submitted($formName, $fieldName, $fieldValue) {
+    require_once(ABSPATH . 'wp-content/plugins/contact-form-7-to-database-extension/CFDBFormIterator.php');
+    $exp = new CFDBFormIterator();
+    $atts = array();
+    $atts['show'] = $fieldName;
+    $atts['filter'] = "$fieldName=$fieldValue";
+    $atts['unbuffered'] = 'true';
+    $exp->export($formName, $atts);
+    $found = false;
+    while ($row = $exp->nextRow()) {
+        $found = true;
+    }
+    return $found;
+}
+ 
+/**
+ * @param $result WPCF7_Validation
+ * @param $tag array
+ * @return WPCF7_Validation
+ */
+function my_validate_tel($result, $tag) {
+    $formName = 'Send SMS'; // Change to name of the form containing this field
+    $fieldName = 'tel-number'; // Change to your form's unique field name
+    $errorMessage = 'Email has already been submitted'; // Change to your error message
+    $name = $tag['name'];
+    if ($name == $fieldName) {
+        if (is_already_submitted($formName, $fieldName, $_POST[$name])) {
+            $result->invalidate($tag, $errorMessage);
+        }
+    }
+    return $result;
+}
+ 
+// use the next line if your field is a **required tel** field on your form
+add_filter('wpcf7_validate_tel*', 'my_validate_tel', 10, 2);
+
+
+
+

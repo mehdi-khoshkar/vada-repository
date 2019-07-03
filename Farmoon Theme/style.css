@@ -71,7 +71,7 @@ a:hover {
 
 
 .navbar-brand img {
-    max-height: 48px;
+    max-height: 58px;
     max-width: 280px;
 }
 
@@ -128,8 +128,8 @@ li.dropdown:hover > .dropdown-menu {
 }
 
 .nav-link {
-    font-size: 20px;
-    margin-right: 23px;
+    font-size: 18px;
+    margin-right: 10px;
 }
 
 
@@ -175,12 +175,19 @@ li.dropdown:hover > .dropdown-menu {
 
 
 #main-blog .entry-title {
-   margin-top: 36px;
-    margin-bottom: 36px;
+  
     font-weight: bold;
-    font-size: 28px;
+    font-size: 18px;
     line-height: 2;
+	display:initial;
+
 }
+
+.single-title{
+ margin-top: 36px;
+    margin-bottom: 36px;	
+}
+
 
 .ads-farmooon,.ads-farmooon-app{
     text-align: center;
@@ -188,7 +195,9 @@ li.dropdown:hover > .dropdown-menu {
 }
 .ads-farmooon-app img {
 margin-top:30px;
+box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 }
+
 #services {
     background-color: #02b1b1;
 }
@@ -219,7 +228,7 @@ section#download-app .container
     text-align: center;
     padding: 40px;
 	    font-weight: bold;
-	    font-size: 32px;
+	    font-size: 28px;
 }
 
 
@@ -296,12 +305,12 @@ ul, ol {
 }
 
 .social-inner {
-    display: flex;
+        display: inline-block;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 23px;
-    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -368,7 +377,8 @@ ul, ol {
 
 #main-blog .entry-content p {
     text-align: justify;
-    font-size: 14pt;
+    font-size: 16px;
+	line-height:2;
 }
 /* Blog */
 
@@ -490,8 +500,7 @@ color: #02b1b1;
 
 
 .card-text {
-    min-height: 233px;
-   
+    min-height: 32vh;   
 }
 
 .rate-post {
@@ -504,11 +513,20 @@ color: #02b1b1;
 }
 
 .instagram-singlePost .btn-info {
-    color: #fff;
-    background-color: #b81770;
-    border-color: #17a2b8;
+       color: #a6a6a6;
+    background-color: unset;
+    border-color: unset;
 }
 
+.instagram-singlePost .btn-info:hover {
+       color: #02b1b1;
+ 
+}
+
+.instagram-singlePost img{
+	    filter: sepia() saturate(10000%) hue-rotate(210deg);
+
+}
 
 .post-arshive {
     padding-bottom: 20px;
@@ -650,7 +668,7 @@ div#n2-ss-2 .n2-font-1103-link a{
 }
 
 #about-us h1 {
-    font-size: 42px;
+    font-size: 28px;
     font-weight: bold;
 	    margin-bottom: 30px;
 }
@@ -751,8 +769,9 @@ margin-bottom: 40px;
 }
 
 .entry-content h2 {
-    font-size: 24px;
+    font-size: 16px;
 	line-height: 2;
+	font-weight: bold;
 }
 
 .caption-brand {
@@ -802,7 +821,7 @@ margin-bottom: 40px;
 }
 	
 		.entry-content a img {
-    width:50%;
+    width:90%;
     height: auto;
 }
 	
@@ -817,10 +836,19 @@ margin-bottom: 40px;
 }
 	
 	#carouselHomeSlider .carousel-item {
-    height: 75vh;
+    height: 32vh;
+    background-size: contain;
 
 }
 	
+	h2.display-4 {
+		font-size: 18px;
+	}
+	
+	.lead {
+    display:none;
+   }
+
 	.carousel-caption {
     position: absolute;
     right: 15%;
@@ -835,6 +863,10 @@ margin-bottom: 40px;
 	.app-download-review strong {
     font-size: 12px;
 }
+	
+/* 	mobile slider */
+	
+
 }
 @media only screen and (max-width : 768px)
 {
@@ -846,7 +878,9 @@ margin-bottom: 40px;
 	.ads-question img{
 		width:100%;
 	}
-	
+	html body div#wprmenu_bar {
+    height: 62px !important;
+}
 
 }
 @media only screen and (max-width : 1024px)
@@ -915,7 +949,7 @@ margin-bottom: 40px;
 	
 	
 .single-post-thumbnail {
-	margin-top:70px;
+	margin-top:82px;
 }
 
 	.ads-farmooon img {
@@ -940,7 +974,7 @@ margin-bottom: 40px;
 {
 	display: block !important;
     position: fixed;
-	   top: 42px;
+	   top: 62px;
     z-index:9999;
 	    width: 100%;
 }
@@ -968,9 +1002,9 @@ margin-bottom: 40px;
 }
 	
 	#wprmenu_bar .bar_logo {
-   
-    width: 130px !important;
-    height: 33px !important;
+       width: 175px !important;
+    height: auto !important;
+  
 }
 	.bg-titlebar{
 
@@ -1019,11 +1053,15 @@ margin-bottom: 40px;
 
 .entry-content ul {
     list-style: inside;
+	margin:40px;
 }
 
 .entry-content ul li {
-    font-size: 14pt;
+        text-align: justify;
+    font-size: 16px;
+    line-height: 2;
 }
+
 
 
 .app-download-review
@@ -1074,4 +1112,293 @@ li#table-price-sidebar .btn-price-sidebar a {
 
 .brand-car:hover {
     opacity: 0.7;
+}
+
+
+.btn-plugin {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    border: 1px solid #27ad60;
+	    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+
+
+
+blockquote {
+  background: #f9f9f9;
+  border-right: 10px solid #a6a6a6;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #a6a6a6;
+	content: '\201d';
+	font-size: 4em;
+  line-height: 0.1em;
+  margin-left: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  color: #a6a6a6;
+	content: '\201c';  
+
+		font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+.ez-toc-title-container {
+    margin-bottom: 30px;
+    
+}
+
+
+#ez-toc-container a:hover {
+     text-decoration: none !important; 
+}
+
+#ez-toc-container li, #ez-toc-container ul, #ez-toc-container ul li, .ez-toc-widget-container, .ez-toc-widget-container li {
+  
+    line-height: 2 !important;
+
+}
+
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    right: 15px;
+    top: 16px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+.related-post img{
+	width:100%;
+}
+
+.rate-post p {
+    display: inline-block;
+}
+
+.post-ratings {
+ 
+    display: inline;
+}
+
+.last-modified {
+    text-align: left;
+    margin-right: 20px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+li#nav_menu-2 {
+    margin: 2em 0 2.5em !important;
+}
+
+iframe {
+    width: 100%;
+}
+
+.panel-heading {
+     background-color: #03bcb4;
+    color: #fff;
+    padding: 9px;
+    font-size: 23px;
+}
+.panel-heading h3 {
+    font-size: 22px;
+}
+.panel.panel-default {
+    margin-top: 30px;
+    border: #D9D9D9 1px solid;
+}
+
+.panel-body.row {
+    padding: 8px;
+}
+
+.edd_purchase_submit_wrapper {
+ 
+    text-align: center;
+}
+
+.edd-submit.button.blue {
+
+    padding: 10px;
+}
+
+#edd_checkout_cart {
+
+    display: inline-table;
+}
+
+#edd_checkout_cart td img {
+    float: right !important;
+   
+}
+
+.entry-content h3 {
+    font-size: 14px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.tel-number {
+    direction: ltr;
+    text-align: right;
+}
+
+.enemad img {
+    background-color: #ffff;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.enemad img:hover {
+
+    opacity: 1;
+}
+
+form#sendsmsiOS {
+        margin-top: 30px;
+    background-color: #f3f3f3;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+form#sendsmsAndroid {
+     margin-top: 30px;
+    background-color: #f3f3f3;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+input#number_android {
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+input#number_ios {
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+}
+
+.btn-warning:hover {
+    color: #ffffff;
+    background-color: #51a2bb;
+    border-color: #51a2bb;
+}
+
+.modal-body {
+
+    padding: 0;
+}
+
+span.badge.badge-info {
+    margin-left: 6px;
+    font-size: 14px;
+}
+
+.panel.box-download-farmoon {
+        padding: 8px;
+    margin: 30px;
+    border: 2px solid #02b1b1;
+	    border-radius: 15px;
+}
+
+.panel.box-download-farmoon a {
+    font-size: 14px;
+    margin: 10px;
+}
+
+.btn-box-download {
+    text-align: center;
+}
+
+.btn-box-download i {
+    font-size: 18px;
+}
+
+li.dropdown ul .dropdown:hover > .dropdown-menu {
+    display: block;
+    text-align: right;
+    top: -4px;
+    right: 249px;
+    width: 250px;
+}
+
+.card-title a:hover {
+    color: #02b1b1;
+}
+.card-title a {
+    color: #000;
+}
+
+.card-body {
+
+    padding: 0.4rem;
+}
+
+ .wpd-custom-field.wpd-cf-text{
+    display: none;
+}
+
+.footernav li {
+    float: right;
+    margin-left: 14px;
+}
+
+.footernav {
+    margin-right: 30px;
 }

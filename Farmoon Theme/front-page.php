@@ -16,7 +16,26 @@
         <div class="carousel-caption d-md-block">
           <h2 class="display-4">خلافی تو بگیر</h2>
           <p class="lead">بی دردسر و در کمترین زمان خلافی تو استعلام کن</p>
+				 <?php  if(strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false) {?>
+
+					<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')) { ?>
+						<div class="app-download-header">
+			<a href="http://uzee.ir/sibche"  onclick="return gtag_report_conversion('http://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
+
+                                        </div>
+						<?php }else{  ?>
+							<div class="app-download-header">
 			<a href="http://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
+
+                                        </div>
+						<?php } ?>
+                                  
+  								<?php } else { ?>
+										<!-- Button trigger modal -->
+							 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+							دانلود مستقیم فرمون</button>
+
+							<?php } ?>
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
@@ -24,8 +43,24 @@
         <div class="carousel-caption  d-md-block">
                   <h2 class="display-4">هشدار سرعت غیرمجاز</h2>
 			<p class="lead">هشدار به هنگام عبور از سرعت مجاز </p>
-			<a href="http://uzee.ir/farmooonir"  class="btn btn-primary">دانلود مستقیم فرمون</a>
-        </div>
+		 <?php  if(strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false) {?>
+			<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')) { ?>
+						<div class="app-download-header">
+			<a href="http://uzee.ir/sibche"  onclick="return gtag_report_conversion('http://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
+
+                                        </div>
+						<?php }else{  ?>
+							<div class="app-download-header">
+			<a href="http://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
+
+                                        </div>
+						<?php } ?>
+  								<?php } else { ?>
+										<!-- Button trigger modal -->
+							 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+							دانلود مستقیم فرمون</button>
+
+							<?php } ?>        </div>
       </div>
 		      <!-- Slide Three - Set the background image for this slide in the line below -->
 
@@ -33,18 +68,55 @@
         <div class="carousel-caption d-md-block">
           <h2 class="display-4">استعلام نمره منفی گواهینامه</h2>
           <p class="lead"> همین حالا نمره منفی گواهینامه تو استعلام کن</p>
-			<a href="http://uzee.ir/farmooonir"  class="btn btn-primary">دانلود مستقیم فرمون</a>
-        </div>
+		 <?php  if(strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false) {?>
+			<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')) { ?>
+						<div class="app-download-header">
+			<a href="http://uzee.ir/sibche"  onclick="return gtag_report_conversion('http://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
+
+                                        </div>
+						<?php }else{  ?>
+							<div class="app-download-header">
+			<a href="http://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
+
+                                        </div>
+						<?php } ?>
+  								<?php } else { ?>
+										<!-- Button trigger modal -->
+							 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+							دانلود مستقیم فرمون</button>
+
+							<?php } ?>
+			  </div>
       </div>
       <!-- Slide Four - Set the background image for this slide in the line below -->
       <div class="carousel-item" style="background-image: url('https://farmooon.com/wp-content/uploads/2019/02/slider-1-new1.jpg')">
         <div class="carousel-caption  d-md-block">
          <h2 class="display-4">هشدار دوربین های کنترل ترافیک</h2>
 			<p class="lead">هشدار نزدیک شدن به دوربین طرح ترافیک و زوج و فرد </p>
-			<a href="http://uzee.ir/farmooonir"  class="btn btn-primary">دانلود مستقیم فرمون</a>
-        </div>
+		 <?php  if(strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false) {?>
+			<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')) { ?>
+						<div class="app-download-header">
+			<a href="http://uzee.ir/sibche"  onclick="return gtag_report_conversion('http://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
+
+                                        </div>
+						<?php }else{  ?>
+							<div class="app-download-header">
+			<a href="http://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
+
+                                        </div>
+						<?php } ?>
+  								<?php } else { ?>
+										<!-- Button trigger modal -->
+							 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+							دانلود مستقیم فرمون</button>
+
+							<?php } ?>
+		  </div>
       </div>
     </div>
+	  
+	  
+
 <!--     <a class="carousel-control-prev" href="#carouselHomeSlider" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
          <span class="sr-only">Previous</span>
@@ -171,10 +243,25 @@
                  <div class="container" data-aos="fade-up" data-aos-duration="1000">
 					<div class="row">
 						<div class="col-md-8">
-                              <h2>همین حالا فرمون دانلود کنید</h2>
+                              <h3>همین حالا فرمون دانلود کنید</h3>
 						</div>
 						<div class="col-md-4">
-                              <a href="http://uzee.ir/farmooonir" class="btn btn-info"> دانلود با لینک مستقیم</a>
+							
+								 <?php  if(strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false) {?>
+                                        <div class="app-download-header">
+							<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')){ ?>
+ 
+                              <a href="http://uzee.ir/sibche" class="btn btn-info" onclick="return gtag_report_conversion('http://uzee.ir/sibche');"> دانلود از سیبچه</a>
+                                 <?php } else { ?>
+				  <a href="http://uzee.ir/farmooonir" class="btn btn-info" onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');"> دانلود با لینک مستقیم</a>
+                                           <?php } ?>
+                                        </div>
+  								<?php } else { ?>
+										<!-- Button trigger modal -->
+							 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#basicExampleModal">
+							دانلود با لینک مستقیم</button>
+
+							<?php } ?>
 						</div>
 
 
@@ -198,7 +285,7 @@
 						?>
 						<?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-					  <div class="col-md-3">
+					  <div class="col-lg-3 col-md-6 col-12">
 						<div class="card mb-4 shadow-sm">
 							<a href="<?php the_permalink(); ?>">
 							

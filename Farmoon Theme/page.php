@@ -21,6 +21,38 @@
 	<div class="col-lg-8  col-md-8 col-xs-12">
 
 
+		<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+دانلود فرمون</button> -->
+
+<!-- Modal -->
+ <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">دانلود فرمون | استعلام خلافی </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<a href="http://uzee.ir/farmooonir" class="btn btn-primary">دانلود مستقیم</a>
+		  
+		   <a class="btn btn-primary" target="_blank" rel="nofollow" href="tg://msg_url?url=http://uzee.ir/farmooonir&text=دانلود فرمون | استعلام خلافی">
+اشتراک در تلگرام	 
+		  </a>
+		  
+<a href="https://api.whatsapp.com/send?text=دانلود فرمون | استعلام خلافی - http://uzee.ir/farmooonir" class="btn btn-primary"  > اشتراک در واتس اپ </a>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div> 
+		
 
 	<section id="main-blog">
 				

@@ -17,13 +17,25 @@
 <div class="row">
 	       <article id="post-<?php the_ID(); ?>" class="col-lg-8 col-md-8 col-xs-12">
 	<section id="main-blog">
+		
+
 				<div class="single-post-thumbnail">
 					<?php	the_post_thumbnail('post-full', ['class' => 'thubmnail-single']); ?>
 	
 		</div>
-						<h1 class="entry-title"><?php the_title(); ?> </h1>			
+      <div class="single-title">
+		  
 
+		
+		  						<h1 class="entry-title"><?php the_title(); ?> </h1>			
 
+		<?php
+		$updated_day = get_the_modified_time('y/m/d');
+$modified_content .= '<div class="last-modified">( آخرین به روزرسانی :  '. $updated_day . ' ) </div>';
+		echo $modified_content;
+		?>
+
+		</div>
 
 
 
@@ -38,6 +50,15 @@
 					 <?php endwhile; ?>
    
 	 <?php endif; ?>
+		
+			   				<div class="instagram-singlePost">
+			
+				    <a href="http://instagram.com/farmoun_khalafi" target="_blank"  class="btn-info" >
+						<img src="https://farmooon.com/wp-content/uploads/2019/01/instagram-2.png" />
+						اخبار ما را دراینستاگرام دنبال کنید
+				
+                 </a>
+			</div>
 	 
 				   					<div class="entry-meta">
 							<span class="date">
@@ -66,35 +87,32 @@ if ( ! empty( $categories ) ) {
 
 	</section>
 			   
-			   				<div class="instagram-singlePost">
-			
-				    <a href="http://instagram.com/farmoun_khalafi" target="_blank" type="button" class="btn btn-info" >
-						<img src="https://farmooon.com/wp-content/uploads/2019/01/instagram-2.png" />
-						اخبار ما را دراینستاگرام دنبال کنید
-				
-                 </a>
-			</div>
+		
 				<div class="rate-post">
-					<p>
-					به این مطلب رای دهید
-				</p>
+				
 				 <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
 				</div>
 			   
-
+     <?php  if(is_single(4771)) { ?>
 			   			   <div class="ads-farmooon-app">
-		<a href="http://uzee.ir/farmooonir" target="_blank"> <img src="https://farmooon.com/wp-content/uploads/2019/04/farmooon-post.jpg" /></a>
+		<a href="http://uzee.ir/farmooonir3" target="_blank"> <img src="https://farmooon.com/wp-content/uploads/2019/06/farmooon-post-2.jpg" /></a>
 	
 		</div>
-			   <div class="related-post">
-		<?php get_template_part( 'partials/related', 'page' ); ?>
-			</div>
-		
+			   <?php } else { ?>
+			   
+			   		   			   <div class="ads-farmooon-app">
+		<a href="http://uzee.ir/farmooonir3" target="_blank"> <img src="https://farmooon.com/wp-content/uploads/2019/06/farmooon-post-2.jpg" /></a>
+	
+		</div>
+			   
+			   <?php } ?>
+			   <div class="panel panel-default">
 
-			   <div class="ads-farmooon">
-		<a href="http://farmooon.com/forum" target="_blank"> <img src="https://farmooon.com/wp-content/uploads/2019/04/farmoon-site-gif-46860.gif" /></a>
+		<?php get_template_part( 'partials/related', 'page' ); ?>
+		
+			   </div>
+
 	
-		</div>
 <?php
 	
 
@@ -105,7 +123,12 @@ if ( ! empty( $categories ) ) {
 
 ?>
 	
-	
+<div class="my_snippet">
+			    <?php
+			   
+    echo apply_filters('my_snippet','display_rich_snippet');
+    ?>
+			   </div>
 	</article>
 
 	
@@ -117,6 +140,30 @@ if ( ! empty( $categories ) ) {
 	
 </div>
 
+<script>
+// jQuery(document).ready(function($) {
+
+//   if (window.history && window.history.pushState) {
+
+//     $(window).on('popstate', function() {
+//       var hashLocation = location.hash;
+//       var hashSplit = hashLocation.split("#!/");
+//       var hashName = hashSplit[1];
+
+//       if (hashName !== '') {
+//         var hash = window.location.hash;
+//         if (hash === '') {
+        
+// 			window.location.replace("https://farmooon.com");
+//         }
+//       }
+//     });
+
+//     window.history.pushState('forward', null);
+//   }
+
+// });
+</script>
 <script>
 jQuery(document).ready(function(){
 $("table").addClass("table");

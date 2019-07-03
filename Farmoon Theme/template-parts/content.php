@@ -2,11 +2,12 @@
    
 	   $categories = get_the_category();
 $category = get_queried_object();
-if($category->term_id == 8)
+if($category->term_id == 8 || $category->term_id == 1)
 {
 	   $category_id = $categories[0]->cat_ID;
 
 }
+
 
 else
 {

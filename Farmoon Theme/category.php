@@ -3,7 +3,6 @@
 <div class="container">
 	
 
-
 <!-- Section: Blog v.2 -->
 <section id ="arshive" class="text-center my-5 ">
 	<?php

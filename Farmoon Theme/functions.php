@@ -3,12 +3,22 @@
 require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/theme-support.php';
 require get_template_directory() . '/inc/widgets.php';
+require get_template_directory() . '/functions_device.php';
+
+
 // Register Custom Navigation Walker
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
 
 // add_filter( 'amp_post_status_default_enabled', '__return_false' );
 
+
+function replace_text($text) {
+	$text = str_replace('display_rich_snippet', '', $text);
+
+	return $text;
+}
+add_filter('my_snippet', 'replace_text');
 
 function custom_menu_page_removing() {
     global $pagenow;
@@ -36,6 +46,24 @@ add_action( 'admin_menu', 'custom_menu_page_removing' );
 
 
 
+//Exclude pages from WordPress Search
+if (!is_admin()) {
+function wpb_search_filter($query) {
+if ($query->is_search) {
+$query->set('post_type', 'post');
+}
+return $query;
+}
+add_filter('pre_get_posts','wpb_search_filter');
+}
+
+
+function mrcode_edd_rial_currency_sign( $formatted, $currency, $price ) {
+return $price . ' ریال';
+}
+add_filter( 'edd_rial_currency_filter_after', 'mrcode_edd_rial_currency_sign', 10, 3 );
+add_filter( 'edd_rial_currency_filter_before', 'mrcode_edd_rial_currency_sign', 10, 3 );
+
 
 // Scheduled Action Hook
 // function run_my_script( ) {
@@ -59,5 +87,8 @@ add_action( 'admin_menu', 'custom_menu_page_removing' );
 //     wp_mail( $to, $subject, $message );
  
 // }
+// 
+// 
+
 
 ?>
