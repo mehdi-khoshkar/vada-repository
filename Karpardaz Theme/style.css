@@ -54,14 +54,14 @@ a:hover {
 #navbarResponsive .navbar-nav > li.dropdown:hover > a, 
 #navbarResponsive .navbar-nav > li.dropdown:hover > a:hover,
 #navbarResponsive .navbar-nav > li.dropdown:hover > a:focus {
-       background-color: rgb(2, 166, 172);
+       background-color: rgb(35, 168, 229);
     color: rgb(255, 255, 255);
 }
 li.dropdown:hover > .dropdown-menu {
    display: block;
     text-align: right;
     right: 18px;
-    width: 250px;
+    width: 650px;
 }
 
 
@@ -79,7 +79,7 @@ li.dropdown:hover > .dropdown-menu {
 .dropdown-menu li a:hover {
     background-color: #23a8e5;
     color: #fff;
-	    padding: 10px;
+	   
 }
 .btn-primary {
     color: #fff;
@@ -104,8 +104,10 @@ li.dropdown:hover > .dropdown-menu {
 }
 
 
-.dropdown-menu li a {
-    padding: 7px;
+.dropdown-item {
+
+    padding: 0.7rem 1.5rem;
+
 }
 
 /* slider */
@@ -166,6 +168,12 @@ li.dropdown:hover > .dropdown-menu {
     margin-bottom: 12px;
 }
 
+.entry-content h2 {
+    font-size: 16px;
+    line-height: 2;
+    font-weight: bold;
+}
+
 .services i:hover {
     opacity: 0.8;
 }
@@ -173,7 +181,7 @@ li.dropdown:hover > .dropdown-menu {
     text-align: center;
     padding: 30px;
 	    font-weight: bold;
-	    font-size: 32px;
+	    font-size: 28px;
 }
 
 
@@ -214,6 +222,22 @@ background: #707070;
     padding: 40px;
 }
 
+
+.ez-toc-title-container {
+    margin-bottom: 30px;
+    
+}
+
+
+#ez-toc-container a:hover {
+     text-decoration: none !important; 
+}
+
+#ez-toc-container li, #ez-toc-container ul, #ez-toc-container ul li, .ez-toc-widget-container, .ez-toc-widget-container li {
+  
+    line-height: 2 !important;
+
+}
 
 /* footer */
 
@@ -313,8 +337,9 @@ ul, ol {
 }
 
 #main-blog .entry-content p {
-    text-align: justify;
-    font-size: 14pt;
+       text-align: justify;
+    font-size: 16px;
+    line-height: 2;
 }
 /* Blog */
 
@@ -353,25 +378,31 @@ td {
 
 
 .sidebar-inner #sidebar li {
-    background-color: #23a8e5;
-    padding: 5px;
+ background-color: #f5f5f5;
+    padding: .4em;
     border-radius: 5px;
     margin-bottom: 7px;
+    border-bottom: 1px solid rgba(0,0,0,.075);
+
 }
 
 .sidebar-inner #sidebar h2 {
-    color: #fff;
+    color: #23a8e5;
     padding: 10px;
     border-bottom: 1px solid #bbb;
 	    font-size: 24px;
 }
 
 .sidebar-inner #sidebar a {
-    color: #fff;
+    color: #000;
 }
 
 .sidebar-inner #sidebar a:hover {
-    color: #000;
+    color: #23a8e5;
+}
+
+.sidebar-inner #sidebar li:last-child {
+    border: none;
 }
 
 .social-footer a {
@@ -577,7 +608,7 @@ div#n2-ss-2 .n2-font-1103-link a{
 
 #about-us h1 {
     margin-bottom: 30px;
-    font-size: 45px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -667,21 +698,35 @@ div#mg-wprm-wrap form.wpr-search-form button.wpr_submit {
     padding: 0px 8px;
     border: none;
 }
+.table-curency{
+		display: inline-table;
+	text-align: center;
 
+	}
+
+.table-curency td {
+    text-align: center;
+}
 @media only screen and (max-width : 468px)
 {
 	.entry-content img {
     width:100%;
     height: auto;
 }
+	.table-curency{
+		display:block !important;
+	}
 	
+	.single-post-thumbnail {
+    margin-top: 70px;
+}
 	.thubmnail-single {
      width:100%;
 		height: auto;
 }
 	
 	#carouselHomeSlider .carousel-item {
-    height: 75vh;
+        height: 32vh;
 
 }
 	
@@ -690,6 +735,48 @@ div#mg-wprm-wrap form.wpr-search-form button.wpr_submit {
     right: 15%;
     top: 2%;
 }
+	
+	.lead {
+    display: none;
+}
+	
+	h2.display-4 {
+    font-size: 18px;
+		margin-bottom: 40px;
+}
+	
+	.app-download-review {
+    display: block !important;
+		position: fixed;
+    top: 42px;
+    z-index: 9999;
+    width: 100%;
+}
+	
+	.app-download-header-review {
+    float: left;
+}
+	
+	.app-download-review strong {
+    font-size: 12px;
+}
+	
+	.alert-warning {
+    color: #ffffff;
+    background-color: #353535;
+    border-color: #353535;
+    height: 60px;
+}
+	
+	.sticky-top {
+
+    display: none;
+}
+	
+	div#carouselHomeSlider {
+    margin-top: 60px;
+}
+	
 }
 @media only screen and (max-width : 768px)
 {
@@ -757,6 +844,12 @@ div#mg-wprm-wrap form.wpr-search-form button.wpr_submit {
 }
 }
 
+
+@media only screen and (max-width: 320px){
+.star-app {
+    display: none;
+}
+}
 @media only screen and (max-width : 1280px){
 .thubmnail-single {
     width: 100%;
@@ -801,6 +894,11 @@ padding-bottom: 40px;
 }
 }
 
+@media only screen and (min-width: 768px){
+.container.single-blog {
+    margin-top: 50px;
+}
+}
 @media only screen and (max-width : 1024px)
 {
 	
@@ -832,4 +930,164 @@ padding-bottom: 40px;
 
 .estelam-khalafi .panel-title {
     padding: 10px;
+}
+
+
+.btn-plugin {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+		    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+.app-download-review {
+    display: none;
+}
+
+#main-blog .entry-title {
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+	display: initial;
+}
+
+.single-title {
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+.entry-content ul {
+    list-style: inside;
+	margin-top: 40px;
+    margin-bottom: 40px;
+}
+.entry-content ul li {
+    font-size: 14pt;
+	    margin-right: 30px;
+}
+
+.table-responsive {
+    display: inline-table;
+ 
+}
+
+
+
+
+
+li.dropdown:hover > .dropdown-menu li {
+    float: right;
+    width: 25%;
+}
+
+
+
+/* responsive menu */
+
+div#mg-wprm-wrap ul#wprmenu_menu_ul>li>span.wprmenu_icon:before {
+    left: -10px;
+	right: unset;
+	    transform: rotate(90deg);
+}
+
+
+/*   sidebar */
+
+li#nav_menu-3 {
+    margin: 2em 0 2.5em !important;
+}
+
+li#wpp-2 {
+    margin: 2em 0 2.5em !important;
+  
+}
+
+li#categories-3 {
+    margin: 2em 0 2.5em !important;
+  
+}
+
+footer h2 {
+    border-bottom: 1px solid #676767;
+    margin-bottom: 17px;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.social-footer {
+    margin: 30px;
+}
+
+.entry-content h3 {
+    font-size: 14px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.entry-content ul li {
+    font-size: 16px;
+    margin-right: 30px;
+}
+
+.last-modified {
+    text-align: left;
+    margin-right: 20px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.panel-heading h3 {
+    font-size: 18px;
+}
+.panel-heading {
+    background-color:#23a8e5;
+    color: #fff;
+    padding: 9px;
+    font-size: 23px;
+}
+
+.panel.panel-default {
+    margin-top: 30px;
+    border: #D9D9D9 1px solid;
+}
+
+.panel-body.row {
+    padding: 8px;
+}
+
+.card-img-top {
+    height: auto;
+}
+
+.card-body {
+  
+    padding: 8px;
+}
+
+.edd_purchase_submit_wrapper {
+    text-align: center;
+}
+
+#edd_checkout_cart {
+
+    display: inline-table;
+}
+
+#edd_checkout_cart td img {
+    float: right !important;
+   
+}
+
+.enemad img {
+    background-color: #ffff;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.enemad img:hover {
+
+    opacity: 1;
 }

@@ -1,9 +1,30 @@
 	  <?php
-	  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-   
+// 	  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
 	   $categories = get_the_category();
-$category_id = $categories[1]->cat_ID;
-	  	$args = array('post_type' => 'post','posts_per_page' => 9,'paged' => $paged,'cat'=>$category_id);
+
+
+$category = get_queried_object();
+
+
+
+if($categories[1]->cat_ID)
+{
+	 $category_id = $categories[1]->cat_ID;
+
+}
+else{
+		  $category_id = $categories[0]->cat_ID;
+
+}
+
+if($category->term_id == 641  || $category->term_id == 2 )
+{
+	   $category_id = $categories[0]->cat_ID;
+
+}
+
+	  	$args = array('post_type' => 'post','cat'=>$category_id);
 			
 			$loop = new WP_Query( $args ); 
 	  

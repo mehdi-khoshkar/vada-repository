@@ -106,68 +106,7 @@
 			</div>
 	  </section>
 
-	  <section id="blog">
 
-			<div class="container blog" data-aos="fade-up" data-aos-duration="1000">
-                                <h2>پست های اخیر</h2>
-					<div class="row">
-						<?php
-						 	$args = array('post_type' => 'post','posts_per_page' => 4);
-			
-			             $loop = new WP_Query( $args ); 
-						
-						?>
-						<?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-					  <div class="col-md-3">
-						<div class="card mb-4 shadow-sm">
-							<a href="<?php the_permalink(); ?>">
-							
-						<?php	the_post_thumbnail('medium', ['class' => 'card-img-top']); ?>
-							   </a>
-							
-	
-
-						  <div class="card-body">
-							  <a href="<?php the_permalink(); ?>">
-								 <div class="arshive-post-title">
-		
-								<h3><?php the_title(); ?> </h3>
-								  </div>
-							  </a>
-							  
-							  						<div class="entry-meta">
-						
-								<span class="categories-links">
-								<i class="fas fa-folder-open"></i>
-									<?php
-								$categories = get_the_category();
-if ( ! empty( $categories ) ) {
-		 echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a> ';
-
-    echo ',<a href="' . esc_url( get_category_link( $categories[1]->term_id ) ) . '">' . esc_html( $categories[1]->name ) . '</a>';
-}									?>
-</span>
-                           
-					 </div><!-- .entry-meta -->
-								<div class="card-text"><?php the_excerpt(); ?></div>
-							   <div class="post-more">
-							  <a href="<?php the_permalink(); ?>"> مشاهده مطلب</a>
-							  </div>
-						  </div>
-						</div>
-					  </div>
-		<?php endwhile; ?>
-   
-<?php endif; ?>
-
-			  
-			
-					</div>
-				  </div>
-
-
-	  </section>
 
 
 	  <section id="testimonials">
@@ -225,7 +164,7 @@ if ( ! empty( $categories ) ) {
                  <div class="container" data-aos="fade-up" data-aos-duration="1000">
 					<div class="row">
 						<div class="col-md-8">
-                              <h2>همین حالا کارپرداز دانلود کنید</h2>
+							<h3>همین حالا کارپرداز دانلود کنید</h3>
 						</div>
 						<div class="col-md-4">
                               <a href="http://uzee.ir/karpardazsite" class="btn btn-info"> دانلود با لینک مستقیم</a>
@@ -239,5 +178,68 @@ if ( ! empty( $categories ) ) {
 		  </section>
 
 
+
+	  <section id="blog">
+
+			<div class="container blog" data-aos="fade-up" data-aos-duration="1000">
+                                <h2>پست های اخیر</h2>
+					<div class="row">
+						<?php
+						 	$args = array('post_type' => 'post','posts_per_page' => 4);
+			
+			             $loop = new WP_Query( $args ); 
+						
+						?>
+						<?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+					  <div class="col-lg-3 col-md-6 col-12">
+						<div class="card mb-4 shadow-sm">
+							<a href="<?php the_permalink(); ?>">
+							
+						<?php	the_post_thumbnail('medium', ['class' => 'card-img-top']); ?>
+							   </a>
+							
+	
+
+						  <div class="card-body">
+							  <a href="<?php the_permalink(); ?>">
+								 <div class="arshive-post-title">
+		
+								<h3><?php the_title(); ?> </h3>
+								  </div>
+							  </a>
+							  
+							  						<div class="entry-meta">
+						
+								<span class="categories-links">
+								<i class="fas fa-folder-open"></i>
+									<?php
+								$categories = get_the_category();
+if ( ! empty( $categories ) ) {
+		 echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a> ';
+
+    echo ',<a href="' . esc_url( get_category_link( $categories[1]->term_id ) ) . '">' . esc_html( $categories[1]->name ) . '</a>';
+}									?>
+</span>
+                           
+					 </div><!-- .entry-meta -->
+								<div class="card-text"><?php the_excerpt(); ?></div>
+							   <div class="post-more">
+							  <a href="<?php the_permalink(); ?>"> مشاهده مطلب</a>
+							  </div>
+						  </div>
+						</div>
+					  </div>
+		<?php endwhile; ?>
+   
+<?php endif; ?>
+
+			  
+			
+					</div>
+				  </div>
+
+
+	  </section>
 
 <?php get_footer(); ?>

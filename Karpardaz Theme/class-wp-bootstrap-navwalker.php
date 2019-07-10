@@ -46,7 +46,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			}
 			$indent = str_repeat( $t, $depth );
 			// Default class to add to the file.
-			$classes = array( 'dropdown-menu' );
+			$classes = array( 'dropdown-menu row' );
 			/**
 			 * Filters the CSS class(es) applied to a menu list element.
 			 *
@@ -132,6 +132,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			// Add some additional default classes to the item.
 			$classes[] = 'menu-item-' . $item->ID;
 			$classes[] = 'nav-item';
+		
 			// Allow filtering the classes.
 			$classes = apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth );
 			// Form a string of classes in format: class="class_names".
@@ -150,7 +151,8 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			 */
 			$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
 			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-			$output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
+			
+			$output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names.'>';
 			// initialize array for holding the $atts for the link item.
 			$atts = array();
 			// Set title from item to the $atts array - if title is empty then
@@ -322,6 +324,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 					}
 					$fallback_output .= '>';
 				}
+			
 				$fallback_output .= '<ul';
 				if ( $menu_id ) {
 					$fallback_output .= ' id="' . esc_attr( $menu_id ) . '"'; }
@@ -330,6 +333,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				$fallback_output .= '>';
 				$fallback_output .= '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="' . esc_attr__( 'Add a menu', 'wp-bootstrap-navwalker' ) . '">' . esc_html__( 'Add a menu', 'wp-bootstrap-navwalker' ) . '</a></li>';
 				$fallback_output .= '</ul>';
+				
 				if ( $container ) {
 					$fallback_output .= '</' . esc_attr( $container ) . '>';
 				}

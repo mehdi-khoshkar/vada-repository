@@ -1,7 +1,7 @@
 <?php
 
 
-function farmoon_load_scripts() {
+function kaarpardaz_load_scripts() {
 
 
     wp_enqueue_style('bootstrap',get_template_directory_uri().'/css/bootstrap.min.css',array(),'4.3.1','all');
@@ -25,5 +25,5 @@ function farmoon_load_scripts() {
 
 
    }
-add_action('wp_enqueue_scripts','farmoon_load_scripts');
+add_action('wp_enqueue_scripts','kaarpardaz_load_scripts');
  ?>

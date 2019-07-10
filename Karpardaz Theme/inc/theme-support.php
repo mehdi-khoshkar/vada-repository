@@ -196,3 +196,18 @@ remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 ); // prev link
 remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); // start link
 remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 ); // Display relational links for the posts adjacent to the current post.
 remove_action( 'wp_head', 'wp_generator' ); // Display the XHTML generator that is generated on the wp_head hook, WP version
+
+
+
+
+
+//Exclude pages from WordPress Search
+if (!is_admin()) {
+function wpb_search_filter($query) {
+if ($query->is_search) {
+$query->set('post_type', 'post');
+}
+return $query;
+}
+add_filter('pre_get_posts','wpb_search_filter');
+}

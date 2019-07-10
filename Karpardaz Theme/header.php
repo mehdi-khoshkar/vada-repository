@@ -13,15 +13,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	
-		
 
-	
-
-
-	
-
-
+	<script type="text/javascript"> (function(){ var now = new Date(); var version = now.getFullYear().toString() + "0" + now.getMonth() + "0" + now.getDate() + "0" + now.getHours(); var head = document.getElementsByTagName("head")[0]; var link = document.createElement("link"); link.rel = "stylesheet"; link.href = "https://app.najva.com/static/css/local-messaging.css" + "?v=" + version; head.appendChild(link); var script = document.createElement("script"); script.type = "text/javascript"; script.async = true; script.src = "https://app.najva.com/static/js/scripts/kaarpardaz-website-5563-5a2d03c6-6fa8-4d00-9bf5-b8482e4f322a.js" + "?v=" + version; head.appendChild(script); })() </script>
 	
 <?php wp_head(); ?>
 </head>
@@ -29,6 +22,41 @@
 <body <?php body_class(); ?>>
 	  <div class="container-fluid section-home">
 
+		  
+		  <div class="app-download-review">
+
+										<div class="alert alert-warning alert-dismissible fade show" role="alert">
+											  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">×</span>
+			  </button>
+											<div class="col-sm-2">
+	
+											</div>
+													<div class="col-sm-10">
+																					<div class="app-download-header-review">
+				<a href="http://uzee.ir/karpardazsite" class="btn btn-light">نصب</a>
+			</div>
+         <strong>استعلام سابقه بیمه برای اندروید</strong>
+			
+							
+											<br>
+														<div class="star-app">
+																	<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half"></i>
+											<span>260,256</span>	
+														</div>
+											
+										
+
+
+											
+											</div>			
+			</div>
+	
+		 </div>
     
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -37,7 +65,7 @@
 		
 			
 				<a class="navbar-brand" href="<?php echo home_url(); ?>">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/logo-kaarpardaz.png"  class="d-inline-block align-top" alt="">
+						<img src="https://kaarpardaz.com/wp-content/uploads/2019/02/logo-kaarpardaz.png"  class="d-inline-block align-top" alt="">
 					
 					  </a>
 

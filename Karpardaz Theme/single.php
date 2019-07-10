@@ -2,7 +2,7 @@
 	
 
 
-
+<!-- 
   <div class="bg-titlebar">
 		<div class="container titlebar">
 
@@ -13,8 +13,8 @@
 		
 
 		</div>
-	</div>
-  <div class="container">
+	</div> -->
+  <div class="container single-blog">
 
 <div class="row">
 	       <article id="post-<?php the_ID(); ?>" class="col-lg-8 col-md-8 col-xs-12">
@@ -27,13 +27,36 @@
 					<?php	the_post_thumbnail('post-full', ['class' => 'thubmnail-single']); ?>
 	
 		</div>
+      <div class="single-title">
+
+						<h1 class="entry-title"><?php the_title(); ?> </h1>			
+
+           		<?php
+		$updated_day = get_the_modified_time('y/m/d');
+$modified_content .= '<div class="last-modified">( آخرین به روزرسانی :  '. $updated_day . ' ) </div>';
+		echo $modified_content;
+		?>
 
 
-
-
-
+		</div>
 			
-					<div class="entry-meta">
+
+
+
+
+
+					 <div class="entry-content">
+
+						<?php the_content(); ?>
+					 </div>
+
+
+		
+					 <?php endwhile; ?>
+   
+	 <?php endif; ?>
+	 
+						<div class="entry-meta">
 							<span class="date">
 							<i class="fas fa-clock"></i>
 								<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="bookmark">
@@ -58,27 +81,11 @@ if ( ! empty( $categories ) ) {
 												</span>            -->
 					 </div><!-- .entry-meta -->
 
-
-
-
-					 <div class="entry-content">
-
-						<?php the_content(); ?>
-					 </div>
-
-
-		
-					 <?php endwhile; ?>
-   
-	 <?php endif; ?>
-	 
-	
-
 	</section>
 			   
 
 			   
-			   <div class="related-post">
+			   <div class="panel panel-default">
 		<?php get_template_part( 'partials/related', 'page' ); ?>
 			</div>
 		
@@ -97,10 +104,24 @@ if ( ! empty( $categories ) ) {
 	
 	</article>
 	
-				<?php
-// Use shortcodes in form like Landing Page Template.
+	
+
+	
+<?php
+	
+	global $wpdb;
+	
+	$result = $wpdb->get_results( "SELECT * FROM wp_posts WHERE post_content LIKE '%sg_popup%'" );
+  if (!$result){
+	  
+				// Use shortcodes in form like Landing Page Template.
 echo do_shortcode( '[sg_popup id="1107" event="inherit"][/sg_popup]' );
-			
+
+  }
+
+
+
+	
 			?>
 	
 <div class="col-lg-4 col-md-4 col-xs-12">
@@ -125,6 +146,8 @@ echo do_shortcode( '[sg_popup id="1107" event="inherit"][/sg_popup]' );
 
 
 </div>
+
+
 
 <script>
 
