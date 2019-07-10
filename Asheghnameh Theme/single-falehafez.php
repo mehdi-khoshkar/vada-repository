@@ -40,7 +40,7 @@
       
 
           <!-- Title -->
-          <h2 class="font-weight-bold"><a><?php the_title(); ?></a></h2>
+          <h2 class="font-weight-bold"><a><?php the_title(); ?> حافظ</a></h2>
 			
 			
 	
@@ -65,6 +65,7 @@
 
     </div>
     <!-- Grid column -->
+    <?php echo do_shortcode('[post_gallery]'); ?>
 
   
 
@@ -91,12 +92,20 @@
             
             <!-- Telegram -->
 			  
- <a class="btn btn-tw waves-effect waves-light" target="_blank" rel="nofollow" href="tg://msg_url?url=<?php the_permalink(); ?>&text=<?php the_title();?>">
+ <!-- <a class="btn btn-tw waves-effect waves-light" target="_blank" rel="nofollow" href="tg://msg_url?url=<?php the_permalink(); ?>&text=<?php the_title();?>">
               <i class="fab fa-telegram pr-2"></i>
               <span class="clearfix  d-md-inline-block">اشتراک در تلگرام</span>
-            </a>
+            </a> -->
  
 			  
+
+            <div class="card text-white bg-success box-ads-falehafez">
+      <!-- <div class="card-header">اپلیکیشن عاشقنامه</div> -->
+      <div class="card-body">
+        <p class="card-text text-white">با نصب برنامه عاشقنامه فال حافظ صوتی بگیرید. همینطور می توانید در دسته بندی غزلیات عاشقانه، مشکل گشا و روزانه از میان غزلیات حافظ، فال بگیرید.</p>
+        <a href="http://uzee.ir/asheghnamehsite" class="btn btn-light-ads green-text font-weight-bold wow fadeIn waves-effect waves-light" data-wow-delay="0.3s" onclick="return gtag_report_conversion('http://uzee.ir/asheghnamehsite');" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.3s;">دانلود مستقیم عاشقنامه</a>      </div>
+    </div>
+
            
         
           </div>
@@ -107,7 +116,6 @@
 
 </section>
 <!-- Section: Blog v.4 -->
-	
 
 		
 	<div class="card-body card-body-cascade text-center">
@@ -132,7 +140,7 @@
 	<?php endif; ?>
 </div>
 
-<?php echo do_shortcode('[sg_popup id=1938]'); ?>
+
 
 
 <?php  get_footer(); ?>

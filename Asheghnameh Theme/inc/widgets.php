@@ -32,4 +32,43 @@ function wpdocs_theme_slug_widgets_init() {
 }
 add_action( 'widgets_init', 'wpdocs_theme_slug_widgets_init' );
 
+function wpdocs_theme_footer_one_init() {
+    register_sidebar( array(
+        'name'          => __( 'فوتر اول', 'textdomain' ),
+        'id'            => 'footer-one',
+        'description'   => __( 'فوتر سایت - بخش اول', 'textdomain' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'wpdocs_theme_footer_one_init' );
 
+
+function wpdocs_theme_footer_two_init() {
+    register_sidebar( array(
+        'name'          => __( 'فوتر دوم', 'textdomain' ),
+        'id'            => 'footer-two',
+        'description'   => __( 'فوتر سایت - بخش  دوم', 'textdomain' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'wpdocs_theme_footer_two_init' );
+
+
+function wpdocs_theme_footer_three_init() {
+    register_sidebar( array(
+        'name'          => __( 'فوتر سوم', 'textdomain' ),
+        'id'            => 'footer-three',
+        'description'   => __( 'فوتر سایت - بخش سوم', 'textdomain' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'wpdocs_theme_footer_three_init' );

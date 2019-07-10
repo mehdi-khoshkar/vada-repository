@@ -19,7 +19,7 @@
 <?php if ( have_posts() ) : ?>
     <?php while (have_posts() ) : the_post(); ?>
     <!-- Grid column -->
-    <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+    <div class="col-lg-4 col-md-12 mb-lg-0 mb-5">
 
       <!-- Featured image -->
 		<a href="<?php the_permalink(); ?>" >
@@ -30,15 +30,15 @@
 		 
      
           <div class="mask rgba-white-slight"></div>
-        <?php } else { ?>
+                 <?php }  ?>
+                 <?php if(is_category( 'متن عاشقانه جدید' )){ ?>
+          <img class="card-img-top" src="https://asheghnameh.com/wp-content/uploads/2019/06/jadid-compressor.jpg" alt="متن عاشقانه جدید"> 
 
-        <img class="card-img-top" src="https://asheghnameh.com/wp-content/uploads/2019/05/pmc-fal-compressor.png" alt="فال pmc"> 
-
-		 
-     
 <div class="mask rgba-white-slight"></div>
 
         <?php } ?>
+		  
+
       </div>
  </a>
    
@@ -50,7 +50,7 @@
       <!-- Post data -->
 		
 
-      <p>منتشر شده در تاریخ :   <?php echo get_the_date('l  j F, Y' );?></p>
+<!--       <p>منتشر شده در تاریخ :   <?php echo get_the_date('l  j F, Y' );?></p> -->
       <!-- Excerpt -->
       <p class="dark-grey-text"><?php the_excerpt(); ?></p>
       <!-- Read more button -->

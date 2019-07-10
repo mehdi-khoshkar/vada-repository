@@ -1,7 +1,7 @@
 <?php
 function omen_register_nav_menu() {
     register_nav_menu('primary','Header navigation menu');
-    register_nav_menu('Footer','footer navigation menu');
+    register_nav_menu('footer','footer navigation menu');
 }
 add_action('after_setup_theme','omen_register_nav_menu');
 
@@ -81,11 +81,37 @@ function pagination_bar( $custom_query ) {
 
 
 
+/*Register tag cloud filter callback*/
+
+add_filter('widget_tag_cloud_args', 'tag_widget_limit');
+ 
+//Limit number of tags inside widget
+function tag_widget_limit($args){
+ 
+//Check if taxonomy option inside widget is set to tags
+if(isset($args['taxonomy']) && $args['taxonomy'] == 'post_tag'){
+  $args['number'] = 10; //Limit number of tags
+}
+ 
+return $args;
+}
 
 
 
 
+function wpse28145_add_custom_types( $query ) {
+    if( is_tag() && $query->is_main_query() ) {
 
+        // this gets all post types:
+        $post_types = get_post_types();
+
+        // alternately, you can add just specific post types using this line instead of the above:
+        // $post_types = array( 'post', 'your_custom_type' );
+
+        $query->set( 'post_type', $post_types );
+    }
+}
+add_filter( 'pre_get_posts', 'wpse28145_add_custom_types' );
 
 
 

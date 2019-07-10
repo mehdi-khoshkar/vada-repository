@@ -24,6 +24,8 @@
     <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
 
       <!-- Featured image -->
+				<a href="<?php the_permalink(); ?>" > 
+
       <div class="view overlay rounded z-depth-2 mb-4">
         
 		  		 <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid']); ?>
@@ -33,14 +35,15 @@
           <div class="mask rgba-white-slight"></div>
         </a>
       </div>
-
+		</a>
    
       <!-- Post title -->
+		<a href="<?php the_permalink(); ?>" > 
       <h4 class="font-weight-bold mb-3"><strong><?php the_title(); ?></strong></h4>
+	</a>
       <!-- Post data -->
 		
 
-      <p>منتشر شده در تاریخ :   <?php echo get_the_date('l  j F, Y' );?></p>
       <!-- Excerpt -->
       <p class="dark-grey-text"><?php the_excerpt(); ?></p>
       <!-- Read more button -->

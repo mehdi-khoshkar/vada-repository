@@ -103,6 +103,8 @@ function gtag_report_conversion(url) {
 </script>
 
 	
+	<script type="text/javascript"> (function(){ var now = new Date(); var version = now.getFullYear().toString() + "0" + now.getMonth() + "0" + now.getDate() + "0" + now.getHours(); var head = document.getElementsByTagName("head")[0]; var link = document.createElement("link"); link.rel = "stylesheet"; link.href = "https://app.najva.com/static/css/local-messaging.css" + "?v=" + version; head.appendChild(link); var script = document.createElement("script"); script.type = "text/javascript"; script.async = true; script.src = "https://app.najva.com/static/js/scripts/asheghnameh-website-5600-5bbb179b-cd5b-4892-9389-be3b045f6bb4.js" + "?v=" + version; head.appendChild(script); })() </script>
+	
 </head>
 	
   <body class="creative-lp" <?php body_class(); ?> >
@@ -156,7 +158,7 @@ function gtag_report_conversion(url) {
 
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar grey">
-            <div class="container">
+            <div class="container-fluid">
 				
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -230,11 +232,11 @@ function gtag_report_conversion(url) {
           <input class="form-control mr-sm-2" name="s" id="s" type="text" placeholder="جستجو ..." aria-label="Search">
           <button class="btn purple-gradient  btn-sm my-0 waves-effect waves-light" ype="submit"  name="submit" id="searchsubmit">جستجو</button>
         </form>
-				
+				<a href="http://uzee.ir/asheghnamehsite" class="btn btn-download white-text font-weight-bold wow fadeIn waves-effect waves-light btn-app-download-top" data-wow-delay="0.3s" onclick="return gtag_report_conversion('http://uzee.ir/asheghnamehsite');" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.3s;">دانلود مستقیم عاشقنامه</a>
             </div>
 			
 		
-<a href="http://uzee.ir/asheghnamehsite" class="btn btn-download white-text font-weight-bold wow fadeIn waves-effect waves-light btn-app-download-top" data-wow-delay="0.3s" onclick="return gtag_report_conversion('http://uzee.ir/asheghnamehsite');" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.3s;">دانلود مستقیم عاشقنامه</a>
+
 			
         </nav>
 	  </header>

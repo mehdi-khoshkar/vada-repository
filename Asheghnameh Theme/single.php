@@ -26,7 +26,7 @@
           <a href="#!">
             <div class="mask rgba-white-slight"></div>
           </a>
-        <?php } else {?>
+        <?php } if(in_category('فال pmc')){?>
     <img class="card-img-top" src="https://asheghnameh.com/wp-content/uploads/2019/05/pmc-fal-compressor.png" alt="فال pmc"> 
 
 			
@@ -34,6 +34,14 @@
             <div class="mask rgba-white-slight"></div>
           </a>
         <?php } ?>
+			
+
+<?php the_post_thumbnail('post-thumbnail', ['class' => 'card-img-top"']); ?>
+
+			
+          <a href="<?php echo get_permalink();?>">
+            <div class="mask rgba-white-slight"></div>
+          </a>
         </div>
 
         <!-- Card content -->
@@ -58,12 +66,18 @@
 
       </div>
   
+      <div class="card text-white bg-success my-5">
+<div class="card-body">
+<p class="card-text text-white">انواع فال و طالع بینی (فال حافظ روزانه، استخاره ازدواج،فال ماه و سال تولد، فال ابجد، فال انبیاء و ... ) در اپلیکیشن عاشقنامه</p>
+<p style="text-align: center;"><a class="btn btn-light-ads green-text font-weight-bold wow fadeIn waves-effect waves-light" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.3s;" href="http://uzee.ir/asheghnamehsite" data-wow-delay="0.3s">دانلود مستقیم عاشقنامه</a></p>
+</div>
+</div>
     </div>
     <!-- Grid column -->
 
-	<div class="col-lg-4 col-md-4 col-xs-12">
+<div class="col-lg-4 col-md-4 col-xs-12">
      <?php get_sidebar(); ?>
-</div>
+</div> 
 
   </div>
   <!-- Grid row -->
@@ -74,16 +88,21 @@
 
 </section>
 <!-- Section: Blog v.4 -->
+
+
 	
 		<div class="card-body card-body-cascade text-center">
 			   
       
    <?php the_tags( 'برچسب ها: ', ', ' ); ?>
 
-        </div>
-	
+       
+</div>	
 
 	
+
+
+
 		<?php
 	
 
@@ -99,9 +118,9 @@
 	
 
 
-</div>
+	 </div>
 
 
-<?php echo do_shortcode('[sg_popup id=1938]'); ?>
+
 
 <?php  get_footer(); ?>

@@ -8,6 +8,11 @@ require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
 
 
+function mrcode_edd_rial_currency_sign( $formatted, $currency, $price ) {
+return $price . ' ریال';
+}
+add_filter( 'edd_rial_currency_filter_after', 'mrcode_edd_rial_currency_sign', 10, 3 );
+add_filter( 'edd_rial_currency_filter_before', 'mrcode_edd_rial_currency_sign', 10, 3 );
 
 
 ?>

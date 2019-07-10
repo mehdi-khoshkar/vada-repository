@@ -1,0 +1,32 @@
+[04-Jul-2019 07:37:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php on line 1
+[04-Jul-2019 07:37:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php on line 1
+[04-Jul-2019 07:37:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php on line 1
+[04-Jul-2019 07:37:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php on line 1
+[06-Jul-2019 04:40:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php on line 1
+[06-Jul-2019 04:40:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php on line 1
+[06-Jul-2019 04:40:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php on line 1
+[06-Jul-2019 04:40:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/farmooon/public_html/wp-content/themes/Farmoon Theme/index.php on line 1

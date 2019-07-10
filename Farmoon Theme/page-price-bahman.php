@@ -8,7 +8,7 @@
 		<div class="container titlebar">
 
 		
-				<h1 class="entry-title">قیمت روز خودرو </h1>			
+        <h1 class="entry-title"> <?php echo get_the_title(); ?></h1>
 	
 		
 		</div>

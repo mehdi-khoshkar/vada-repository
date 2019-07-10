@@ -118,21 +118,11 @@
         </div>
 	
 
-	
-		<?php
-	
 
-			// If comments are open or we have at least one comment, load up the comment template.
- 			if ( comments_open() || get_comments_number() ) {
- 				comments_template();
- 			}
-	
-	?>
 	
 	<?php endif; ?>
 </div>
 
-<?php echo do_shortcode('[sg_popup id=1938]'); ?>
 
 
 <?php  get_footer(); ?>

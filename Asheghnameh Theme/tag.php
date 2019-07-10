@@ -22,6 +22,7 @@
 
       <!-- Featured image -->
 		<a href="<?php the_permalink(); ?>" >
+      <?php if(get_post_type( get_the_ID() ) == 'post' ){ ?>
       <div class="view overlay rounded z-depth-2 mb-4">
         
        <img class="card-img-top" src="https://asheghnameh.com/wp-content/uploads/2019/04/daily-fal.jpg" alt="Sample image"> 
@@ -31,6 +32,7 @@
           <div class="mask rgba-white-slight"></div>
        
       </div>
+      <?php } ?>
  </a>
    
       <!-- Post title -->
@@ -40,8 +42,9 @@
 		</a>
       <!-- Post data -->
 		
-
+      <?php if(get_post_type( get_the_ID() ) == 'post' ){ ?>
       <p>منتشر شده در تاریخ :   <?php echo get_the_date('l  j F, Y' );?></p>
+      <?php } ?>
       <!-- Excerpt -->
       <p class="dark-grey-text"><?php the_excerpt(); ?></p>
       <!-- Read more button -->

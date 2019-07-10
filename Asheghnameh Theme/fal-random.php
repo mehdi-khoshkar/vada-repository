@@ -93,7 +93,7 @@
 <!-- Central Modal Medium Success-->
 			
           <!-- Title -->
-          <h2 class="font-weight-bold"><a><?php the_title();?> </a></h2>
+          <h2 class="font-weight-bold"><a><?php the_title();?> حافظ</a></h2>
 			<p class="number_id">
 			<?php 
 			global $post;
@@ -199,10 +199,9 @@
 			 
          
 			  <button type="button" class="btn pink-gradient white-text waves-effect waves-light" data-toggle="modal" data-target="#centralModalSuccessOmen">
-				  <i class="fab fa-phoenix-framework pl-2"></i>تعبیر فال</button>
+				  تعبیر فال</button>
 
 			  <a href="https://asheghnameh.com/shahed-fal/?Fal_ID=<?php echo $ShahedFAl_ID; ?>" class="btn btn-gplus waves-effect waves-light"  rel="nofollow">
-              <i class="fab fa-phoenix-framework pr-2"></i>
               <span class="clearfix  d-md-inline-block"> شاهد فال</span>
             </a>
 		
@@ -211,14 +210,14 @@
 
 							  
   <a class="btn btn-gplus waves-effect waves-light" data-toggle="modal" data-target="#centralModalSuccessNewFal" rel="nofollow" href="http://asheghnameh.com/view-fale-hafez/">
-              <i class="fab fa-phoenix-framework pr-2"></i>
+              <!-- <i class="fab fa-phoenix-framework pr-2"></i> -->
               <span class="clearfix  d-md-inline-block">فال جدید</span>
             </a>
 			              <!-- Telegram -->
- <a class="btn btn-tw waves-effect waves-light" target="_blank" rel="nofollow" href="tg://msg_url?url=<?php the_permalink(); ?>&text=<?php the_title();?>">
+ <!-- <a class="btn btn-tw waves-effect waves-light" target="_blank" rel="nofollow" href="tg://msg_url?url=<?php the_permalink(); ?>&text=<?php the_title();?>">
               <i class="fab fa-telegram pr-2"></i>
               <span class="clearfix  d-md-inline-block">ارسال</span>
-            </a>
+            </a> -->
  
         
           </div>
@@ -226,7 +225,12 @@
 			
          
 			
-         
+          <div class="card text-white bg-success my-5">
+      <!-- <div class="card-header">اپلیکیشن عاشقنامه</div> -->
+      <div class="card-body">
+        <p class="card-text text-white">با نصب برنامه عاشقنامه فال حافظ صوتی بگیرید. همینطور می توانید در دسته بندی غزلیات عاشقانه، مشکل گشا و روزانه از میان غزلیات حافظ، فال بگیرید.</p>
+        <a href="http://uzee.ir/asheghnamehsite" class="btn btn-light-ads green-text font-weight-bold wow fadeIn waves-effect waves-light" data-wow-delay="0.3s" onclick="return gtag_report_conversion('http://uzee.ir/asheghnamehsite');" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.3s;">دانلود مستقیم عاشقنامه</a>      </div>
+    </div>
 
 
         </div>
@@ -235,13 +239,11 @@
 			<?php wp_reset_postdata(); ?>
 	
 	<?php endif; ?>
+
+
+
 </div>
 
-<?php
-// Use shortcodes in form like Landing Page Template.
-echo do_shortcode( '[sg_popup id=1938]' );
-
-?>
 <?php  get_footer(); ?>
 
 
