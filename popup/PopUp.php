@@ -153,6 +153,39 @@ function my_header_scripts(){
 var cookie_name = website;
 
  if (-1 === document.cookie.indexOf(cookie_name)) {
+	 
+	 
+	 var deviceAgent = navigator.userAgent.toLowerCase();
+	var isiphone = deviceAgent.match(/(iphone|ipod|ipad)/);
+	var isAndroid = deviceAgent.match(/android/);
+	 
+	 if (isiphone) {
+		 
+		 		      $('#popup_container a[href^="https://"]').each(function(){ 
+            var oldUrl = $(this).attr("href"); // Get current url
+            var newUrl = oldUrl.replace("https://uzee.ir/farmooonir", "https://uzee.ir/sibche"); // Create new url
+            $(this).attr("href", newUrl); // Set herf value
+        });
+		 
+	 }
+	 
+	 if (isAndroid) {
+		 		  $('#popup_container  a[href^="https://"]').each(function(){ 
+          
+				  });
+		 
+	}
+	 if(!(isAndroid || isiphone)){
+	 
+		      $('#popup_container  a[href^="https://"]').each(function(){ 
+            var oldUrl = $(this).attr("href"); // Get current url
+            var newUrl = oldUrl.replace("https://uzee.ir/farmooonir", ""); // Create new url
+            $(this).attr("href", newUrl); // Set herf value
+				 $('#popup_container a').attr("data-toggle","modal");
+				  $('#popup_container a').attr("data-target","#basicExampleModal");
+			 
+        });	 
+	 }
 
      var content_popup = $( "#popup_container" ).html();
 	 
@@ -172,6 +205,8 @@ var cookie_name = website;
 
 
  }
+	 
+	 
  }
 		
 		
@@ -180,8 +215,41 @@ var cookie_name = website;
 
  if (-1 === document.cookie.indexOf(cookie_name)) {
 
-     var content_popup = $( "#popup_container_special" ).html();
+	 var deviceAgent = navigator.userAgent.toLowerCase();
+	var isiphone = deviceAgent.match(/(iphone|ipod|ipad)/);
+	var isAndroid = deviceAgent.match(/android/);
 	 
+	 if (isiphone) {
+		 
+		 		      $('#popup_container_special a[href^="https://"]').each(function(){ 
+            var oldUrl = $(this).attr("href"); // Get current url
+            var newUrl = oldUrl.replace("https://uzee.ir/farmooonir", "https://uzee.ir/sibche"); // Create new url
+            $(this).attr("href", newUrl); // Set herf value
+			 $(this).attr("onclick","return gtag_report_conversion('http://uzee.ir/sibche')"); 
+        });
+		 
+	 }
+	 
+	 if (isAndroid) {
+		 		  $('#popup_container_special  a[href^="https://"]').each(function(){ 
+          
+			 $(this).attr("onclick","return gtag_report_conversion('https://uzee.ir/farmooonir')"); 
+				  });
+		 
+	}
+	 if(!(isAndroid || isiphone)){
+	 
+		      $('#popup_container_special  a[href^="https://"]').each(function(){ 
+            var oldUrl = $(this).attr("href"); // Get current url
+            var newUrl = oldUrl.replace("https://uzee.ir/farmooonir", ""); // Create new url
+            $(this).attr("href", newUrl); // Set herf value
+				 $('#popup_container_special a').attr("data-toggle","modal");
+				  $('#popup_container_special a').attr("data-target","#basicExampleModal");
+			 
+        });	 
+	 }
+	      var content_popup = $( "#popup_container_special" ).html();
+
 	 setTimeout(function(){ 
  Swal.fire({
 
@@ -318,6 +386,8 @@ global $post;
                         <script>  
                     
 							 jQuery( document ).ready(function() { 
+		 
+        
             var cookie_name_special = $('#cookie_name_special').text();
                                 set_cookie_special(cookie_name_special); 
                             });
