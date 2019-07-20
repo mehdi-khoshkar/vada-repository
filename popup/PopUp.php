@@ -80,12 +80,16 @@ function display_popup_meta_box( $popup ) {
     $meta = get_post_meta(get_the_ID(), 'type_popup', true);
 	    $meta_special = get_post_meta(get_the_ID(), 'type_popup_special', true);
 
-echo $meta;
-	echo  $meta_special;
+        if($meta == 'all'){
+            $checked_all ='checked';
+        }
 
-	  $categories = get_categories();
-	
+	 
+      $html = '<input type="radio" id="type_popup" name="type_popup" value="all" '.$checked_all .'/>';
+      $html .= '<label for="type_popup">تمام صفحات</label>';
+      echo $html;
 
+      $categories = get_categories();
 
 			foreach($categories as $category) { ?>
 
@@ -139,16 +143,20 @@ function my_header_scripts(){
 
 	
   set_valid();
+		 popup_shordcode($atts, $content = null);
+
+	
 ?>
     <script>   
  
  function set_cookie(website) {
-
 var cookie_name = website;
+
  if (-1 === document.cookie.indexOf(cookie_name)) {
 
      var content_popup = $( "#popup_container" ).html();
-     setTimeout(function(){ 
+	 
+	 setTimeout(function(){ 
  Swal.fire({
 
  html:content_popup,
@@ -159,7 +167,33 @@ var cookie_name = website;
  'ممنون',
 
  })
- }, 3000);
+	 }, 3000);
+ document.cookie = cookie_name +'=returning_'+cookie_name+';max-age=86400;path=/;'
+
+
+ }
+ }
+		
+		
+		 function set_cookie_special(website) {
+var cookie_name = website;
+
+ if (-1 === document.cookie.indexOf(cookie_name)) {
+
+     var content_popup = $( "#popup_container_special" ).html();
+	 
+	 setTimeout(function(){ 
+ Swal.fire({
+
+ html:content_popup,
+ showCloseButton: true,
+ showCancelButton: false,
+ focusConfirm: false,
+ confirmButtonText:
+ 'ممنون',
+
+ })
+	 }, 3000);
  document.cookie = cookie_name +'=returning_'+cookie_name+';max-age=86400;path=/;'
 
 
@@ -185,9 +219,29 @@ function set_valid(){
         foreach ( $result as $popup ){
                 $popup_categories = get_the_terms( $popup->ID, 'category' );
                
+            
+                if($popup->meta_value == 'all')
+                {
+					
+		  if(get_post_status( $popup->post_id ) == 'publish' ){
+
+                
+                if(!is_front_page() && !isset($_COOKIE['farmoon_all']) ){ 
+                content_popup($popup->post_id)
+                ?>
+                    <script>  
+        
+                jQuery( document ).ready(function() {   
+                            set_cookie('farmoon_all'); 
+                        });
+                            </script>
+        
+            <?php   }  } }
 			foreach($popup_categories as $popup_category){
 				
-				if($popup->meta_value == $popup_category->term_id && get_post_status( $popup->post_id) == 'publish' ){
+				if($popup->meta_value == $popup_category->term_id ){
+							  if(get_post_status( $popup->post_id ) == 'publish' ){
+
 			      $cookie_name = 'farmooon_'.$popup->meta_value;
 					echo '<span id="cookie_name" style=" display: none;">'.$cookie_name.'</span>';
                     if(!is_front_page()  && $popup_category &&!isset($_COOKIE[$cookie_name]) ){ 
@@ -204,7 +258,7 @@ function set_valid(){
                 <?php   } 
 			   
 
-             
+							  }       
 
 }
 			}   
@@ -225,6 +279,15 @@ function content_popup($popup_id){
 }
 
 
+function content_popup_special($popup_id){
+
+    $content_post = get_post($popup_id);
+    $content = $content_post->post_content;
+    $content = apply_filters('the_content', '<div id="popup_container_special"style="display:none">'.$content.'</div>');
+    echo $content;    
+}
+
+
 
 
 function popup_shordcode($atts, $content = null){
@@ -237,29 +300,32 @@ global $post;
 	
      global $wpdb;
     $table_name = $wpdb->prefix.'postmeta';
-    $result = $wpdb->get_results ( "SELECT * FROM $table_name WHERE meta_key = 'type_popup' " );
+    $result = $wpdb->get_results ( "SELECT * FROM $table_name WHERE meta_key = 'type_popup_special' " );
 	
-  
 
         foreach ( $result as $popup ){
 
-			 
-               if($popup->meta_value == $post_id)
+               if($popup->meta_value == $post->ID)
                     {
-                    $cookie_name = 'farmooon_'.$post->post_id;
-					echo '<span id="cookie_name" style=" display: none;">'.$cookie_name.'</span>';
-                    if(!is_front_page() && is_single($post_id) && !isset($_COOKIE[$cookie_name]) ){ 
-                    content_popup($popup->post_id)
+				   
+				   if(get_post_status( $popup->post_id ) == 'publish' ){
+                    $cookie_name = 'farmooon_'.$post->ID;
+					echo '<span id="cookie_name_special" style=" display: none;">'.$cookie_name.'</span>';
+                    if(!is_front_page() && is_single($post->ID)  &&!isset($_COOKIE[$cookie_name]) ){ 
+						
+                    content_popup_special($popup->post_id);
                     ?>
                         <script>  
-            var cookie_name = $('#cookie_name').text();
-                    jQuery( document ).ready(function() {   
-                                set_cookie(cookie_name); 
+                    
+							 jQuery( document ).ready(function() { 
+            var cookie_name_special = $('#cookie_name_special').text();
+                                set_cookie_special(cookie_name_special); 
                             });
-                                </script>
+                             </script>
             
                 <?php  
 					} 
+			   }
 			   } 
 			  } 
 		
@@ -300,7 +366,7 @@ function my_manage_popup_columns( $column, $post_id ) {
 	    $meta_special = get_post_meta(get_the_ID(), 'type_popup_special', true);
 
 			if($meta_special && get_post_status( $post->post_id ) == 'publish' ){
-						  echo '<input type="text" value="[popup post_id= '.$meta_special.'][/popup]" readonly style="width: 30%;">';
+						  echo '<input type="text" value="[popup post_id= '.$meta_special.'][/popup]" readonly style="width: 100%;">';
 
 			} else {
 				echo '-';
