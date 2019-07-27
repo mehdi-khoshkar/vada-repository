@@ -1,4 +1,4 @@
-<?php /* Template Name: Fale Ghahve Random */ ?>
+<?php /* Template Name: Fale Shame Random */ ?>
 
 <?php get_header();  ?>
 
@@ -14,7 +14,7 @@
 	
 
 <!-- Section: Blog v.4 -->
-<section class="section-single-faleghahve">
+<section class="section-single-faleShame">
 
 	
 
@@ -22,26 +22,26 @@
   <div class="row">
 
     <!-- Grid column -->
-    <div class="col-md-12">
+    <div class="col-md-8">
 
       <!-- Card -->
       <div class="card card-cascade wider reverse">
 
         <!-- Card image -->
         <div class="view view-cascade overlay">
-          <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/faleghahve.jpg" alt="Sample image">
+          <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/faleshame.jpg" alt="Sample image">
           <a href="#!">
             <div class="mask rgba-white-slight"></div>
           </a>
         </div>
         <?php
-        $NfaleGhahve = filter_input(INPUT_GET, 'faleGhahve');
+        $NfaleShame = filter_input(INPUT_GET, 'faleShame');
 		
         // Query  posts
             $the_query = new WP_Query( array(
-            'post_type'      => 'faleghahve',
+            'post_type'      => 'faleshame',
             'orderby'        => 'rand',
-            'posts_per_page' => $NfaleGhahve,
+            'posts_per_page' => $NfaleShame,
 
             ) );
 
@@ -55,13 +55,13 @@ if ( $the_query->have_posts() ) : ?>
 // Loop through the posts
 while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
         <!-- Card content -->
-        <div class="card-body card-body-cascade text-center">
+        <div class="card-body  text-center">
 
 			
 
-			
+			<img src="https://asheghnameh.com/wp-content/uploads/2019/05/asli2.gif" alt="">
           <!-- Title -->
-          <h2 class="font-weight-bold"><a><?php the_title();?> </a></h2>
+          <?php  the_content(); ?>
 	
 			
 
@@ -71,11 +71,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
    
       <!-- Card -->
 
-      <!-- Excerpt -->
-      <div class="mt-5 mb-5 content-excerpt">
-               <?php  the_content(); ?>
 
-      </div>
   
 	
                    <?php endwhile; ?>
@@ -84,23 +80,8 @@ while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
     <!-- Grid column -->
     
 
-  </div>
-  <!-- Grid row -->
 
- 
-
-
-
-</section>
-<!-- Section: Blog v.4 -->
-	
-
-		
-
-        
-  
-	
-<div class="card-body card-body-cascade text-center">
+    <div class="card-body card-body-cascade text-center">
 			
 			
 			
@@ -108,16 +89,9 @@ while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
           <div class="social-counters">
 			  
 			  
-			 
-         
-		
-		
-		
-            
-
 
 							  
-  <a class="btn btn-gplus waves-effect waves-light"  href="https://asheghnameh.com/%D9%81%D8%A7%D9%84-%D9%82%D9%87%D9%88%D9%87/">
+  <a class="btn btn-gplus waves-effect waves-light"  href="https://asheghnameh.com/%D9%81%D8%A7%D9%84-%D8%B4%D9%85%D8%B9/">
               <i class="fab fa-phoenix-framework pr-2"></i>
               <span class="clearfix  d-md-inline-block">فال جدید</span>
             </a>
@@ -134,8 +108,33 @@ while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
 
         </div>
 
-	
+        <?php include_once('abzar-page.php'); ?>
+
 	<?php endif; ?>
+</div>
+<div class="col-lg-4 col-md-4 col-xs-12">
+     <?php get_sidebar(); ?>
+</div>
+ 
+  </section>	
+
+
+
+</section>
+<!-- Section: Blog v.4 -->
+	
+
+
+
+
+
+				
+		
+
+        
+  
+	
+
 	
 </div>
 
