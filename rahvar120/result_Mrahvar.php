@@ -2,16 +2,9 @@
 
 //extract data from the post
 //set POST variables
-// $url = 'https://uzee.ir/result_rahvar.php';
-
-// $url2 = "https://uzee.ir/rahvar.php";
-
-
 $url = 'http://estelam.rahvar120.ir/index.jsp?siteid=1&fkeyid=&siteid=1&pageid=2542';
 
 $url2 = "http://estelam.rahvar120.ir/index.jsp?siteid=1&fkeyid=&siteid=1&pageid=2371666";
-
-
 
 $fields_string="";
 
@@ -57,10 +50,12 @@ curl_close ($ch);
 	}
 
 
+$static_string = 'M';
 
+$bar_code = $static_string.$_POST['hashtraghami'];
 
 $fields = array(
-	'BAR_KD' => urlencode($_POST['hashtraghami']),
+	'BAR_KD' => urlencode($bar_code),
 	'capcha' => urlencode($_POST['capcha']),
 	'cptchid' => urlencode($_POST['cptchid']),
 

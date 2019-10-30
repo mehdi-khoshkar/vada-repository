@@ -7,12 +7,12 @@ require($_SERVER['DOCUMENT_ROOT'] .'/wp-load.php' );
 include_once('jdf.php');
 
 
-$table_name  = $wpdb->prefix.'rahvar';
+$table_name  = $wpdb->prefix.'Mrahvar';
 $barcode = $_POST['barcode'];
 
 if($_POST['barcode'])
 {
-	$results_search_barcode = $wpdb->get_results( "SELECT * FROM $table_name WHERE barcode = $barcode"); // Query to fetch data from database table and storing in $results
+	$results_search_barcode = $wpdb->get_results( "SELECT * FROM $table_name WHERE barcode = '$barcode'"); // Query to fetch data from database table and storing in $results
 
 
 	$i = 1;
@@ -38,30 +38,13 @@ function change_date($date)
 			<tr>
 			<td> <?php echo $i++; ?></td>
 					<td> <?php echo $row->barcode; ?></td>
-					<td> <?php echo $row->pelak; ?></td>
 					<td> <?php echo  $row->mobile; ?></td>
-                      
-		
+
+			
+
 			      <td> <?php change_date($row->date); ?></td>
-
-					<?php
-
-						$tools_str = $row->tools;
-						if($tools_str == 'barcode')
-						{
-						$tools_str = 'بارکد';
-						} else{
-						$tools_str = 'پلاک';
-						}
-
-						?>
-							
-						<td> <?php echo  $tools_str; ?></td>
-
-						<td> <a  target="_blank" class="btn btn-success" href="https://farmooon.com/rahvar120/result.php?id=<?php echo $row->id; ?>">مشاهده</a></td>
-
-
-									</tr>
+					<td> <a  target="_blank" class="btn btn-success" href="https://farmooon.com/rahvar120/Mresult.php?id=<?php echo $row->id; ?>">مشاهده</a></td>
+			</tr>
 			<?php 
 			}
 				

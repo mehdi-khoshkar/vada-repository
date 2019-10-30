@@ -19,9 +19,7 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+
 }
 
 .row-space {
@@ -446,7 +444,6 @@ label.error {
 .tab-list {
   list-style: none;
   text-align: center;
-  padding: 25px 0;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -515,7 +512,7 @@ label.error {
 
 .tab-content > .tab-pane {
   display: none;
-  padding: 35px 0;
+  padding: 15px 0;
   padding-bottom: 43px;
 }
 
@@ -752,6 +749,7 @@ label.error {
 .nav>li>a {
 
   padding: 0;
+  display:none;
 }
 
 .navbar-toggle {

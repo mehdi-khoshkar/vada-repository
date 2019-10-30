@@ -1,9 +1,126 @@
 <?php include_once('header.php') ?>
     <div class="page-wrapper bg-img-1 p-t-275 p-b-100">
+
+    
         <div class="wrapper wrapper--w820">
+        <?php
+
+define( 'SHORTINIT', true );
+
+require($_SERVER['DOCUMENT_ROOT'] .'/wp-load.php' );
+include_once('jdf.php');
 
 
-            <div class="card card-1">
+$table_name  = $wpdb->prefix.'rahvar';
+
+
+
+	$data = $wpdb->get_results( "SELECT count(*) as total from $table_name WHERE tools ='barcode'"); // Query to fetch data from database table and storing in $results
+    $data_unique = $wpdb->get_results("SELECT barcode,date, COUNT(1) AS rpt_count FROM $table_name WHERE tools ='barcode' GROUP BY barcode ORDER BY date DESC"); // Query to fetch data from database table and storing in $results
+    ?>
+<h1>آمار استعلام خلافی خودرو با بارکد</h1>
+<div class="alert alert-success" role="alert">
+  آمار کل استعلام خلافی ها تاکنون : <?php  echo  $data[0]->total; ?>
+</div>
+<?php
+$date = $data_unique[0]->date;
+$array = explode(' ', $date);
+//print_r($array);
+list($year, $month, $day) = explode('-', $array[0]);
+list($hour, $minute, $second) = explode(':', $array[1]);
+$timestamp_date = mktime($month, $day, $year);
+$timestamp_time = jmktime($hour, $minute, $second);
+
+//echo $timestamp;
+$jalali_date = jdate("تاریخ آخرین استعلامی:Y/m/d", $timestamp_date);
+$jalali_time = jdate("زمان:H:i:s", $timestamp_time);
+
+?>
+
+<div class="alert alert-danger" role="alert">
+  تعداد استعلام خلافی ها تاکنون : <?php  echo  count($data_unique); ?><br/>
+ <?php echo $jalali_date;echo $jalali_time; ?>
+ <br/>
+ بارکد : <?php  echo  $data_unique[0]->barcode; ?>
+</div>
+
+
+
+<?php
+$data = $wpdb->get_results( "SELECT count(*) as total from $table_name WHERE tools ='pelak'"); // Query to fetch data from database table and storing in $results
+    $data_unique = $wpdb->get_results("SELECT barcode,pelak,date, COUNT(1) AS rpt_count FROM $table_name WHERE tools ='pelak' GROUP BY barcode ORDER BY date DESC"); // Query to fetch data from database table and storing in $results
+    ?>
+<h1>آمار استعلام خلافی خودرو با پلاک</h1>
+<div class="alert alert-success" role="alert">
+  آمار کل استعلام خلافی ها تاکنون : <?php  echo  $data[0]->total; ?>
+</div>
+<?php
+$date = $data_unique[0]->date;
+$array = explode(' ', $date);
+//print_r($array);
+list($year, $month, $day) = explode('-', $array[0]);
+list($hour, $minute, $second) = explode(':', $array[1]);
+$timestamp_date = mktime($month, $day, $year);
+$timestamp_time = jmktime($hour, $minute, $second);
+
+//echo $timestamp;
+$jalali_date = jdate("تاریخ آخرین استعلامی:Y/m/d", $timestamp_date);
+$jalali_time = jdate("زمان:H:i:s", $timestamp_time);
+
+?>
+
+<div class="alert alert-danger" role="alert">
+  تعداد استعلام خلافی ها تاکنون : <?php  echo  count($data_unique); ?><br/>
+ <?php echo $jalali_date;echo $jalali_time; ?>
+ <br/>
+ پلاک : <?php  echo  $data_unique[0]->pelak; ?>
+ <br/>
+ بارکد : <?php  echo  $data_unique[0]->barcode; ?>
+</div>
+
+
+
+<?php
+
+define( 'SHORTINIT', true );
+
+require($_SERVER['DOCUMENT_ROOT'] .'/wp-load.php' );
+include_once('jdf.php');
+
+
+$table_name  = $wpdb->prefix.'Mrahvar';
+
+
+
+	$data = $wpdb->get_results( "SELECT count(*) as total from $table_name"); // Query to fetch data from database table and storing in $results
+    $data_unique = $wpdb->get_results("SELECT barcode,date, COUNT(1) AS rpt_count FROM $table_name GROUP BY barcode ORDER BY date DESC"); // Query to fetch data from database table and storing in $results
+    ?>
+<h1>آمار استعلام خلافی موتور سیکلت</h1>
+<div class="alert alert-success" role="alert">
+  آمار کل استعلام خلافی ها تاکنون : <?php  echo  $data[0]->total; ?>
+</div>
+<?php
+$date = $data_unique[0]->date;
+$array = explode(' ', $date);
+//print_r($array);
+list($year, $month, $day) = explode('-', $array[0]);
+list($hour, $minute, $second) = explode(':', $array[1]);
+$timestamp_date = mktime($month, $day, $year);
+$timestamp_time = jmktime($hour, $minute, $second);
+
+//echo $timestamp;
+$jalali_date = jdate("تاریخ آخرین استعلامی:Y/m/d", $timestamp_date);
+$jalali_time = jdate("زمان:H:i:s", $timestamp_time);
+
+?>
+
+<div class="alert alert-danger" role="alert">
+  تعداد استعلام خلافی ها تاکنون : <?php  echo  count($data_unique); ?><br/>
+ <?php echo $jalali_date;echo $jalali_time; ?>
+ <br/>
+ بارکد : <?php  echo  $data_unique[0]->barcode; ?>
+</div>
+           <div class="card card-1" style="display: none;">
                 <div class="card-heading">
                     <h1 class="title"> استعلام آنلاین خلافی خودرو از estelam.rahvar120.ir</h1>
                 </div>

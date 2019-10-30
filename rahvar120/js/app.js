@@ -1,9 +1,9 @@
 ﻿$(document).ready(function(){
 
 
-window.onload = function() {
+
   $('#js-wizard-form #hashtraghami').focus();
-}
+
 
 
     // someone already explained why count has to be declared outside the function
@@ -157,8 +157,14 @@ function form_submit() {
 
 
   var t1 =$('#result_table table').html();
+var response_rahvar =$('#result_table').html();
+ if (!response_rahvar) {
+        $('.message_box').html(
+    '<div class="alert alert-danger" role="alert">  سامانه راهور در دسترس نیست </div>'
+    );
+}
  
-  if (!t1) {
+  else if (!t1) {
     
     if (captcha_valid == 1) {
 console.log(captcha_valid);

@@ -1,10 +1,10 @@
 ﻿function result_rahvar() {
 
-    var barcode = $('#hashtraghami').val();
+    var barcode = 'M' + $('#hashtraghami').val();
     $.ajax
     ({
     type: "POST",
-    url: "https://farmooon.com/rahvar120/function_result.php",
+    url: "https://farmooon.com/rahvar120/function_Mresult.php",
     data: {barcode:barcode},
   
     beforeSend: function() {

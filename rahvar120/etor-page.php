@@ -1,8 +1,7 @@
 <?php
 
 
-// $url = "https://uzee.ir/rahvar.php";
-$url = "http://estelam.rahvar120.ir/index.jsp?siteid=1&fkeyid=&siteid=1&pageid=2371666";
+$url = "https://etore.me/pages/how-to-pay-bills-fines.html";
    
   
             $content = file_url_contents($url);
@@ -14,11 +13,10 @@ function file_url_contents($url){
 
  
     $crl = curl_init();
-  
+    $timeout = 30;
     curl_setopt ($crl, CURLOPT_URL,$url);
     curl_setopt ($crl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT,30);
-curl_setopt($ch, CURLOPT_TIMEOUT,30);
+    curl_setopt ($crl, CURLOPT_CONNECTTIMEOUT, $timeout);
     $ret = curl_exec($crl);
     curl_close($crl);
     return $ret;

@@ -72,8 +72,7 @@ function render_captcha() {
   $(".wizard-container #ch_capt").attr("onclick","http://estelam.rahvar120.ir/"+cptchid_src);
 } else{
   $('#capimg').hide();
-  $('#step-3 .form-group').hide();
-  $(".message_box_img").html('<div class="alert alert-danger" role="alert">سایت راهور در دسترس نیست لطفا در زمان دیگری مراجعه نمایید</div>');
+  $(".message_box_img").html('<div class="alert alert-danger" role="alert">سایت راهور در دسترس نیست</div>');
 
 }
 
@@ -97,7 +96,6 @@ $.ajax
 type: "GET",
 url: "https://farmooon.com/rahvar120/rahvar",
  timeout: 10000,
-async: true,
 beforeSend: function() {
 $('#captcha-img').hide();
 $('.message_box_rahvar').html(
@@ -153,6 +151,49 @@ $('.message_box_rahvar').hide();
 });
 
 
+function get_barcode(){
+
+var twoDigit = $("input[name=twoDigit]").val();
+var letter = $("#letter option:selected").text();
+var threeDigit = $("input[name=threeDigit]").val();
+var irDigit = $("input[name=irDigit]").val();
+
+
+var pelak = '%D8%A7%D9%8A%D8%B1%D8%A7%D9%86'+encodeURI(irDigit+'ــ'+threeDigit+letter+twoDigit);
+
+
+    $.ajax
+        ({
+        type: "POST",
+        url: "https://farmooon.com/rahvar120/function-barcode",
+       data: {pelak:pelak},
+        error: function(request, status, error){
+        $('.message_box_rahvar').html(
+        '<div class="alert alert-danger" role="alert">خطا در دریافت اطلاعات</div>'
+        );
+
+            },	
+
+            success: function(data)
+            {
+                    
+                if(data == 'none'){
+                    $('#js-wizard-form #step-2 .nextBtn').hide();
+                      $('#js-wizard-form #step-2 .form-group').hide();
+                       $('.message_box_valid').html(
+        '<div class="alert alert-danger" role="alert">شماره پلاک شما یافت نشد </div>'
+        );
+                }
+                else{
+                $('#js-wizard-form #hashtraghami').val(data);
+
+                }
+                
+            }
+
+        });
+}
+
 function form_submit() {
 
   $.ajax
@@ -190,7 +231,7 @@ var body =$('#result_table header').html();
 
 
  
-      $(".message_box").html('<div class="alert alert-danger" role="alert">سامانه راهور در حال حاضر در دسترس نیست</div>');
+      $(".message_box").html('<div class="alert alert-danger" role="alert">سامانه راهور در حال حاضر در دسترس نیست<</div>');
      
 }
 
@@ -222,24 +263,20 @@ var price =' ';
             total_price += price;
         
         });
-
-
-
   $(".message_box").append('<div class="alert alert-danger" role="alert">مبلغ کل تخلفات :' + addCommas(total_price) +'ریال  </div>');
+
 
 var pelak_str =$('#table_final tbody tr:nth-child(1) td:nth-child(10)').text();
   $(".message_box").append('<div class="alert alert-info" role="alert">پلاک :' + pelak_str +'</div>');
-    $(".message_box").append('<a class="btn btn-primary" href="https://farmooon.com/tag/%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%AE%D9%84%D8%A7%D9%81%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A8%D8%A7-%D8%B4%D9%85%D8%A7%D8%B1%D9%87-%D9%BE%D9%84%D8%A7%DA%A9/">استعلام خلافی از طریق پلاک</a>');
 
 var pelak = pelak_str.replace(/\s/g, '');
 
-
 setTimeout(function(){
- var table_final_str = $('#table_final > tbody').html();
+   var table_final_str = $('#table_final > tbody').html();
 var table_final = table_final_str.replace(/^\s+|\r\n|\n|\r|(>)\s+(<)|\s+$/gm, '$1$2');
  var hashtraghami = $('#hashtraghami').val();
  var mobile = $('#mobile').val();
- var tools = 'barcode';
+ var tools = 'pelak';
       $.ajax
       ({
       type: "POST",

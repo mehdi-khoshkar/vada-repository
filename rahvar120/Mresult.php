@@ -1,4 +1,5 @@
-<? include_once('header.php'); ?>
+<? include_once('Mheader.php'); ?>
+
 
 <body>
 
@@ -15,14 +16,12 @@ $id  = filter_input(INPUT_GET, 'id');
 
 if($id)
 {
-    $table_name = $wpdb->prefix.'rahvar';
-    $results_search_id = $wpdb->get_results( "SELECT * FROM $table_name WHERE id = $id "); // Query to fetch data from database table and storing in $results
-  
-?>
-  
+    $table_name = $wpdb->prefix.'Mrahvar';
+	$results_search_id = $wpdb->get_results( "SELECT * FROM $table_name WHERE id = $id "); // Query to fetch data from database table and storing in $results
 
+?>
    
-  <div class="alert alert-success" role="alert">
+   <div class="alert alert-success" role="alert">
            شماره پلاک :  <?php   echo $results_search_id[0]->pelak; ?>
         </div>
 
@@ -33,9 +32,7 @@ if($id)
             <div class="alert alert-danger" role="alert">
             مبلغ کل تخلفات :  <?php  echo $results_search_id[0]->total_price; ?>
         </div>
-  
-
-   <!-- <a id="btnPrint" class="btn btn-success">چاپ</a>	 -->
+        	
    <div id="tab4">
     <table class="table table-striped table-responsive" id="table_final" style="">
     <thead>

@@ -71,7 +71,7 @@ function render_captcha() {
 
   $(".wizard-container #ch_capt").attr("onclick","http://estelam.rahvar120.ir/"+cptchid_src);
 } else{
-  $('#capimg').hide();
+   $('#capimg').hide();
   $('#step-3 .form-group').hide();
   $(".message_box_img").html('<div class="alert alert-danger" role="alert">سایت راهور در دسترس نیست لطفا در زمان دیگری مراجعه نمایید</div>');
 
@@ -97,7 +97,6 @@ $.ajax
 type: "GET",
 url: "https://farmooon.com/rahvar120/rahvar",
  timeout: 10000,
-async: true,
 beforeSend: function() {
 $('#captcha-img').hide();
 $('.message_box_rahvar').html(
@@ -158,7 +157,7 @@ function form_submit() {
   $.ajax
   ({
   type: "POST",
-  url: "https://farmooon.com/rahvar120/result_rahvar",
+  url: "https://farmooon.com/rahvar120/result_Mrahvar",
   data: $("#js-wizard-form").serialize(),
 
   beforeSend: function() {
@@ -190,7 +189,7 @@ var body =$('#result_table header').html();
 
 
  
-      $(".message_box").html('<div class="alert alert-danger" role="alert">سامانه راهور در حال حاضر در دسترس نیست</div>');
+      $(".message_box").html('<div class="alert alert-danger" role="alert">سامانه راهور در حال حاضر در دسترس نیست<</div>');
      
 }
 
@@ -198,15 +197,13 @@ var body =$('#result_table header').html();
 
 
  
-      $(".message_box").html('<div class="alert alert-info" role="alert">اطلاعات مربوط به تخلف خودروی شما تا این تاریخ در راهور یافت نگردیده است</div>');
+      $(".message_box").html('<div class="alert alert-info" role="alert">اطلاعات مربوط به تخلف موتور سیکلت شما تا این تاریخ در راهور یافت نگردیده است</div>');
      
 }
 else
 {
 
   $(".message_box").html('<div class="alert alert-success" role="alert">لیست خلافی شما</div>');
-
-
 
 
 function get_data_rahvar(){
@@ -222,34 +219,29 @@ var price =' ';
             total_price += price;
         
         });
-
-
-
   $(".message_box").append('<div class="alert alert-danger" role="alert">مبلغ کل تخلفات :' + addCommas(total_price) +'ریال  </div>');
 
 var pelak_str =$('#table_final tbody tr:nth-child(1) td:nth-child(10)').text();
   $(".message_box").append('<div class="alert alert-info" role="alert">پلاک :' + pelak_str +'</div>');
-    $(".message_box").append('<a class="btn btn-primary" href="https://farmooon.com/tag/%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%AE%D9%84%D8%A7%D9%81%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A8%D8%A7-%D8%B4%D9%85%D8%A7%D8%B1%D9%87-%D9%BE%D9%84%D8%A7%DA%A9/">استعلام خلافی از طریق پلاک</a>');
 
 var pelak = pelak_str.replace(/\s/g, '');
 
-
 setTimeout(function(){
- var table_final_str = $('#table_final > tbody').html();
+  var table_final_str = $('#table_final > tbody').html();
 var table_final = table_final_str.replace(/^\s+|\r\n|\n|\r|(>)\s+(<)|\s+$/gm, '$1$2');
  var hashtraghami = $('#hashtraghami').val();
  var mobile = $('#mobile').val();
- var tools = 'barcode';
       $.ajax
       ({
       type: "POST",
-      url: "https://farmooon.com/rahvar120/function-rahvar",
-      data: {hashtraghami:hashtraghami,mobile:mobile,total:total,total_price:total_price,pelak:pelak,table_final:table_final,tools:tools},
+      url: "https://farmooon.com/rahvar120/function-Mrahvar",
+      data: {hashtraghami:hashtraghami,mobile:mobile,total:total,total_price:total_price,pelak:pelak,table_final:table_final},
       });
       }, 5000);
 }
 
 setTimeout(get_data_rahvar, 3000);
+
 
 
  
@@ -267,7 +259,7 @@ $('#table_final').show();
   $("#table_final .odd").remove();
 
  });
- 
+
 
  
 }
