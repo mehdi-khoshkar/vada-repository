@@ -10,30 +10,9 @@
         <?php bloginfo( 'name' ); ?>
     </title>
 
-    <script type="text/javascript">
-        (function() {
-            var now = new Date();
-            var version = now.getFullYear().toString() + "0" + now.getMonth() + "0" + now.getDate() + "0" + now.getHours();
-            var head = document.getElementsByTagName("head")[0];
-            var link = document.createElement("link");
-            link.rel = "stylesheet";
-            link.href = "https://app.najva.com/static/css/local-messaging.css" + "?v=" + version;
-            head.appendChild(link);
-            var script = document.createElement("script");
-            script.type = "text/javascript";
-            script.async = true;
-            script.src = "https://app.najva.com/static/js/scripts/farmooon-3952-6aaeb66d-01c3-4a36-ae0f-ef282adce945.js" + "?v=" + version;
-            head.appendChild(script);
-        })()
-    </script>
 
     <!-- Add Amp  -->
-    <?php
-	if(is_single(303))
-	{ ?>
-        <link rel="amphtml" href="https://farmooon.com/amp/p-303.php">
-        <?php
-	}
+ <?php
 		if(is_single(502))
 	{ ?>
         <link rel="amphtml" href="https://farmooon.com/amp/p-502.php">
@@ -41,21 +20,9 @@
 	}
 	?>
 
-            <script>
-                ! function(t, e, n) {
-                    t.yektanetAnalyticsObject = n, t[n] = t[n] || function() {
-                        t[n].q.push(arguments)
-                    }, t[n].q = t[n].q || [];
-                    var a = new Date,
-                        r = a.getFullYear().toString() + "0" + a.getMonth() + "0" + a.getDate() + "0" + a.getHours(),
-                        c = e.getElementsByTagName("script")[0],
-                        s = e.createElement("script");
-                    s.async = 1, s.type = "text/javascript", s.src = "https://cdn.yektanet.com/rg_woebegone/scripts/2044/rg.complete.js?v=" + r, c.parentNode.insertBefore(s, c)
-                }(window, document, "yektanet");
-            </script>
+    	
 
-            <meta name="yn-tag" id="cd346793-a70f-4cee-a555-f92cf8871cd5">
-	
+
 	<!-- Global site tag (gtag.js) - Google Ads: 836444557 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-836444557"></script>
 <script>
@@ -82,8 +49,15 @@ function gtag_report_conversion(url) {
   return false;
 }
 </script>
+	
+<!-- 		menu css -->
+	
+
+	
 
             <?php wp_head(); ?>
+	
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -136,11 +110,11 @@ function gtag_report_conversion(url) {
 
       <div class="modal-body">
 		  
-		   <a class="btn btn-warning" target="_blank" rel="nofollow" href="tg://msg_url?url=http://uzee.ir/sibche&text=دانلود فرمون | استعلام خلافی"><i class="fab fa-telegram-plane"></i>
+		   <a class="btn btn-warning" target="_blank" rel="nofollow" href="tg://msg_url?url=https://uzee.ir/sibche&text=دانلود فرمون | استعلام خلافی"><i class="fab fa-telegram-plane"></i>
  ارسال به تلگرام	 
 		  </a>
 		  
-<a href="https://api.whatsapp.com/send?text=دانلود فرمون | استعلام خلافی - http://uzee.ir/sibche" class="btn btn-success"> <i class="fab fa-whatsapp"></i>
+<a href="https://api.whatsapp.com/send?text=دانلود فرمون | استعلام خلافی - https://uzee.ir/sibche" class="btn btn-success"> <i class="fab fa-whatsapp"></i>
 ارسال به واتس اپ </a>
 <img src="https://farmooon.com/wp-content/uploads/2019/06/apple-logotype.png" />
 		  		 <form id="sendsmsiOS" >
@@ -186,7 +160,8 @@ function gtag_report_conversion(url) {
 							<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')){ ?>
 									         <div class="col-sm-10">
                             <div class="app-download-header-review">
-                                <a href="http://uzee.ir/sibche" class="btn btn-light" onclick="return gtag_report_conversion('http://uzee.ir/sibche');">نصب</a>
+                                <a href="https://uzee.ir/sibche" rel="nofollow" class="btn btn-light" onclick="return gtag_report_conversion('https://uzee.ir/sibche');">نصب</a>
+                                
                             </div>
                             <strong>استعلام خلافی خودرو برای iOS</strong>
 
@@ -207,7 +182,7 @@ function gtag_report_conversion(url) {
 						
 							      <div class="col-sm-10">
                             <div class="app-download-header-review">
-                                <a href="http://uzee.ir/farmooonir" class="btn btn-light" onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');">نصب</a>
+                    <a href="https://uzee.ir/farmooonir" rel="nofollow" class="btn btn-light" onclick="return gtag_report_conversion('https://uzee.ir/farmooonir');">نصب</a>
                             </div>
                             <strong>استعلام خلافی خودرو برای اندروید</strong>
 
@@ -248,7 +223,7 @@ function gtag_report_conversion(url) {
 	
               				         <div class="col-sm-10">
                             <div class="app-download-header-review">
-                                <a href="http://uzee.ir/sibche" class="btn btn-light" onclick="return gtag_report_conversion('http://uzee.ir/sibch');">نصب</a>
+                                <a href="https://uzee.ir/sibche" rel="nofollow" class="btn btn-light" onclick="return gtag_report_conversion('https://uzee.ir/sibch');">نصب</a>
                             </div>
                             <strong>استعلام خلافی خودرو برای iOS</strong>
 
@@ -285,7 +260,7 @@ function gtag_report_conversion(url) {
 	
                     <div class="col-sm-10">
                         <div class="app-download-header-review">
-                            <a href="http://uzee.ir/farmooonir" class="btn btn-light" onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');">نصب</a>
+                            <a href="https://uzee.ir/farmooonir" rel="nofollow" class="btn btn-light" onclick="return gtag_report_conversion('https://uzee.ir/farmooonir');">نصب</a>
                         </div>
                         <strong>استعلام خلافی خودرو برای اندروید</strong>
 
@@ -314,6 +289,8 @@ function gtag_report_conversion(url) {
                     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
                         <div class="container-fluid">
 
+                        
+
                             <a class="navbar-brand" href="<?php echo home_url(); ?>">
                                 <img src="https://farmooon.com/wp-content/uploads/2019/06/logo-farmoonNew-2.png" class="d-inline-block align-top" alt="">
 
@@ -335,13 +312,13 @@ function gtag_report_conversion(url) {
                                 <?php  if(is_single(4771)) { ?>
                                        
                                     <div class="app-download-header">
-                                        <a href="http://uzee.ir/farmooonir" class="btn btn-primary">دانلود فرمون</a>
+                                        <a href="https://uzee.ir/farmooonir" class="btn btn-primary">دانلود فرمون</a>
                                     </div>
 
                                     <?php } else{?>
 							 <?php  if(strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false) {?>
                                         <div class="app-download-header">
-                                            <a href="http://uzee.ir/farmooonir" class="btn btn-primary">دانلود فرمون</a>
+                                            <a href="https://uzee.ir/farmooonir" class="btn btn-primary">دانلود فرمون</a>
 
                                         </div>
   								<?php } else { ?>

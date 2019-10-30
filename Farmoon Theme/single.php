@@ -14,11 +14,51 @@
 	</div> -->
   <div class="container">
 
+
+	
 <div class="row">
-	       <article id="post-<?php the_ID(); ?>" class="col-lg-8 col-md-8 col-xs-12">
+<div class="col-lg-8 col-md-8 col-xs-12">
+<?php
+		if(is_single(303))
+		{
+		include_once('page-rahvar.php'); 
+		}
+
+		if(is_single(364))
+		{
+		include_once('page-Mrahvar.php'); 
+		}
+
+		if(is_single(8504))
+		{
+		include_once('page-rahvar-accident.php'); 
+		}
+
+		if(is_single(597))
+		{ ?>
+
+
+
+
+<!-- All you need is a defined width & height -->
+<iframe frameborder="0" height="550" src="https://myservices.tehran.ir/debt/inquery"  width="100%" ></iframe>
+
+
+
+
+
+		<?php
+		}
+		?>
+
+	
+	       <article id="post-<?php the_ID(); ?>">
+
+
+
 	<section id="main-blog">
 		
-
+	
 				<div class="single-post-thumbnail">
 					<?php	the_post_thumbnail('post-full', ['class' => 'thubmnail-single']); ?>
 	
@@ -59,6 +99,11 @@ $modified_content .= '<div class="last-modified">( آخرین به روزرسا�
 				
                  </a>
 			</div>
+
+			<div class="rate-post">
+				
+				<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+			   </div>
 	 
 				   					<div class="entry-meta">
 							<span class="date">
@@ -88,29 +133,25 @@ if ( ! empty( $categories ) ) {
 	</section>
 			   
 		
-				<div class="rate-post">
-				
-				 <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
-				</div>
-			   
-     <?php  if(is_single(4771)) { ?>
-			   			   <div class="ads-farmooon-app">
-		<a href="http://uzee.ir/farmooonir3" target="_blank"> <img src="https://farmooon.com/wp-content/uploads/2019/06/farmooon-post-2.jpg" /></a>
-	
-		</div>
-			   <?php } else { ?>
-			   
-			   		   			   <div class="ads-farmooon-app">
-		<a href="http://uzee.ir/farmooonir3" target="_blank"> <img src="https://farmooon.com/wp-content/uploads/2019/06/farmooon-post-2.jpg" /></a>
-	
-		</div>
-			   
-			   <?php } ?>
-			   <div class="panel panel-default">
 
+			   
+		  <!-- <div class="ads-farmooon-app">
+		<a href="https://uzee.ir/farmooonir3" target="_blank"> <img src="https://farmooon.com/wp-content/uploads/2019/06/farmooon-post-2.jpg" /></a>
+	
+		</div> -->
+			   
+			   <?php if(!is_single(303) && !is_single(502) && !is_single(540) && !is_single(1438) && !is_single(552) && !is_single(1168) && !is_single(386)) { ?> 
+			   <div class="panel panel-default">
 		<?php get_template_part( 'partials/related', 'page' ); ?>
+			</div>
+			   <? } else{ ?>
+
+			   
+		<?php get_template_part( 'partials/related', 'category' ); ?>
 		
-			   </div>
+			  <?php 
+			   }
+			   ?>
 
 	
 <?php
@@ -130,7 +171,7 @@ if ( ! empty( $categories ) ) {
     ?>
 			   </div>
 	</article>
-
+</div>
 	
 <div class="col-lg-4 col-md-4 col-xs-12">
      <?php get_sidebar(); ?>
@@ -140,30 +181,7 @@ if ( ! empty( $categories ) ) {
 	
 </div>
 
-<script>
-// jQuery(document).ready(function($) {
 
-//   if (window.history && window.history.pushState) {
-
-//     $(window).on('popstate', function() {
-//       var hashLocation = location.hash;
-//       var hashSplit = hashLocation.split("#!/");
-//       var hashName = hashSplit[1];
-
-//       if (hashName !== '') {
-//         var hash = window.location.hash;
-//         if (hash === '') {
-        
-// 			window.location.replace("https://farmooon.com");
-//         }
-//       }
-//     });
-
-//     window.history.pushState('forward', null);
-//   }
-
-// });
-</script>
 <script>
 jQuery(document).ready(function(){
 $("table").addClass("table");

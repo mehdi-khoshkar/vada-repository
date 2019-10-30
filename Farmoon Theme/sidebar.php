@@ -1,10 +1,28 @@
 <section id="sidebar-blog">
 			<div class="sidebar-inner">
    <aside>
+   <?php if(is_single(303)){ ?>
+     <style>
+li#custom_html-5 {
+    display: none;
+}
 
-	 <?php if ( is_active_sidebar( 'sidebar-blog' ) ) { ?>
+.ads-farmooon-app {
+    display: none;
+}
+
+li#wpp-5 {
+    display: none;
+}
+	 </style>
+   <?php } ?>
+
+	 <?php if ( is_active_sidebar( 'sidebar-blog' )) { ?>
     <ul id="sidebar">
         <?php dynamic_sidebar('sidebar-blog'); ?>
+
+		<?php if(!is_single(303)){ ?>
+
 				<li id="table-price-sidebar"> 
 				<h2 class="widgettitle wigetprice">قیمت روز خودرو </h2>
 
@@ -124,6 +142,8 @@ foreach($results_iran as $row){?>
 			<option>بی ام و</option>
 			<option> رنو</option>
 			<option>آئودی</option>
+			<option>پژو</option>
+			<option>کیا</option>
 
     </select>
 			<label for="exampleFormControlSelect1">مدل خودرو</label> 
@@ -135,8 +155,9 @@ foreach($results_iran as $row){?>
 			
 			
 
-	
+	<div class="searchPriceBtn" >
 <button  type="submit" id="searchPriceBtn" class="search-submit btn btn-primary" style="display:none;"> جستجو </button>
+</div>
 </div>	
  </form> 
 			</div>
@@ -164,9 +185,17 @@ foreach($results_iran as $row){?>
 			
 								</tbody></table>
 
+								<?php } ?>
 
 				</li>
+
+
+
+
     </ul>
+
+
+
 <?php } ?>
 
 

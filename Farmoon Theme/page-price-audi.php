@@ -17,9 +17,8 @@
 
 
     <div class="container">
-        <div class="col-md-12" style="padding-top:15px">
+        <div class="col-md-12 car-price" style="padding-top:15px">
 
-            <a href="https://farmooon.ir/?page_id=3572" class="btn btn-primary btn-top-price"> بازگشت</a>
 
             <div class="brand-car">
 
@@ -65,11 +64,24 @@
 
             </table>
 
+            <div class="btn-top-price">
+<a href="https://farmooon.ir/?page_id=3572" class="btn btn-primary"> سایر خودرو ها</a>
+        </div>
+</div>
 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+<div class="box-price-page">
+<?php the_content(); ?>
+</div>
+<?php endwhile; ?>
+   
+   <?php endif; ?>
         </div>
 
 
-</div>
+
+
 
     <!-- <script  src="<?php echo get_template_directory_uri(); ?>/price/price.js"></script> -->
 

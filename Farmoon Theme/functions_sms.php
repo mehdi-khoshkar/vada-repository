@@ -19,7 +19,7 @@ ini_set("soap.wsdl_cache_enabled", "0");
     $parameters['to'] = "$number_android";
     $parameters['from'] = "300012304020";
     $parameters['text'] ="لینک دانلود فرمون برای کاربران اندروید :
-    http://uzee.ir/farmooonir";
+    https://uzee.ir/farmooonirandsms";
     $parameters['isflash'] =false;
    
       $data = array(     
@@ -61,7 +61,10 @@ ini_set("soap.wsdl_cache_enabled", "0");
     $parameters['to'] = "$number_ios";
     $parameters['from'] = "300012304020";
     $parameters['text'] ="لینک دانلود فرمون برای کاربران iOS : 
-    https://uzee.ir/sibche";
+    دانلود از سیبچه :
+    https://uzee.ir/sibche
+    دانلود از آی اپس : 
+    https://uzee.ir/farmooniapps";
     $parameters['isflash'] =false;
    
       $data = array(     

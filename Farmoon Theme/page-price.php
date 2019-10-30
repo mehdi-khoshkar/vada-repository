@@ -166,6 +166,26 @@ td {
 			
 		</div>
 
+        <div class="brand-car col-md-4">
+                 <a href="https://farmooon.com/?page_id=6340">
+                 <img class="brand-img" src="<?php echo get_template_directory_uri();?>/BrandsCar/peugeot.png" />
+                 <div class="caption-brand">پژو</div>
+
+                  </a>
+		
+			
+		</div>
+
+        <div class="brand-car col-md-4">
+                 <a href="https://farmooon.com/?page_id=6344">
+                 <img class="brand-img" src="<?php echo get_template_directory_uri();?>/BrandsCar/kia.png" />
+                 <div class="caption-brand">کیا</div>
+
+                  </a>
+		
+			
+		</div>
+
 
 			</div>
 

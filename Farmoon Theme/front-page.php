@@ -1,4 +1,4 @@
-	<?php /* Template Name: Home Page */ ?>
+<?php /* Template Name: Home Page */ ?>
 
 
 <?php get_header(); ?>
@@ -20,12 +20,12 @@
 
 					<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')) { ?>
 						<div class="app-download-header">
-			<a href="http://uzee.ir/sibche"  onclick="return gtag_report_conversion('http://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
+			<a href="https://uzee.ir/sibche"  onclick="return gtag_report_conversion('https://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
 
                                         </div>
 						<?php }else{  ?>
 							<div class="app-download-header">
-			<a href="http://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
+			<a href="https://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('https://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
 
                                         </div>
 						<?php } ?>
@@ -46,12 +46,12 @@
 		 <?php  if(strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false) {?>
 			<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')) { ?>
 						<div class="app-download-header">
-			<a href="http://uzee.ir/sibche"  onclick="return gtag_report_conversion('http://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
+			<a href="https://uzee.ir/sibche"  onclick="return gtag_report_conversion('https://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
 
                                         </div>
 						<?php }else{  ?>
 							<div class="app-download-header">
-			<a href="http://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
+			<a href="https://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('https://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
 
                                         </div>
 						<?php } ?>
@@ -71,12 +71,12 @@
 		 <?php  if(strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false) {?>
 			<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')) { ?>
 						<div class="app-download-header">
-			<a href="http://uzee.ir/sibche"  onclick="return gtag_report_conversion('http://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
+			<a href="https://uzee.ir/sibche"  onclick="return gtag_report_conversion('https://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
 
                                         </div>
 						<?php }else{  ?>
 							<div class="app-download-header">
-			<a href="http://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
+			<a href="https://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('https://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
 
                                         </div>
 						<?php } ?>
@@ -96,12 +96,12 @@
 		 <?php  if(strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false) {?>
 			<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')) { ?>
 						<div class="app-download-header">
-			<a href="http://uzee.ir/sibche"  onclick="return gtag_report_conversion('http://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
+			<a href="https://uzee.ir/sibche"  onclick="return gtag_report_conversion('https://uzee.ir/sibche');" class="btn btn-primary">دانلود  فرمون از سیبچه</a>
 
                                         </div>
 						<?php }else{  ?>
 							<div class="app-download-header">
-			<a href="http://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
+			<a href="https://uzee.ir/farmooonir"  onclick="return gtag_report_conversion('https://uzee.ir/farmooonir');" class="btn btn-primary">دانلود مستقیم فرمون</a>
 
                                         </div>
 						<?php } ?>
@@ -251,9 +251,9 @@
                                         <div class="app-download-header">
 							<?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')){ ?>
  
-                              <a href="http://uzee.ir/sibche" class="btn btn-info" onclick="return gtag_report_conversion('http://uzee.ir/sibche');"> دانلود از سیبچه</a>
+                              <a href="https://uzee.ir/sibche" class="btn btn-info" onclick="return gtag_report_conversion('https://uzee.ir/sibche');"> دانلود از سیبچه</a>
                                  <?php } else { ?>
-				  <a href="http://uzee.ir/farmooonir" class="btn btn-info" onclick="return gtag_report_conversion('http://uzee.ir/farmooonir');"> دانلود با لینک مستقیم</a>
+				  <a href="https://uzee.ir/farmooonir" class="btn btn-info" onclick="return gtag_report_conversion('https://uzee.ir/farmooonir');"> دانلود با لینک مستقیم</a>
                                            <?php } ?>
                                         </div>
   								<?php } else { ?>
@@ -278,14 +278,16 @@
                                 <h2>پست های اخیر</h2>
 					<div class="row">
 						<?php
-						 	$args = array('post_type' => 'post','posts_per_page' => 4);
-			
+						 	$args = array('post_type' => 'post','posts_per_page' => 8);
+
 			             $loop = new WP_Query( $args ); 
 						
 						?>
+													 <div class="owl-carousel owl-post owl-theme">
+
 						<?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-					  <div class="col-lg-3 col-md-6 col-12">
+						<div class="item">
 						<div class="card mb-4 shadow-sm">
 							<a href="<?php the_permalink(); ?>">
 							
@@ -327,13 +329,58 @@ if ( ! empty( $categories ) ) {
    
 <?php endif; ?>
 
-			  
-			
+</div>
 					</div>
 				  </div>
 
 
 	  </section>
+
+
+	  <div class="container special-post" data-aos="fade-up" data-aos-duration="1000">
+		  <h2>تیترهای مهم اخیر</h2>
+<?php
+								// WP_Query arguments
+$args = array (
+'post_type'              => array( 'post' ),
+'post_status'            => array( 'publish' ),
+'posts_per_page'            => -1,
+'meta_query'             => array(
+    array(
+        'key'       => 'meta-box-checkbox',
+        'value'     => 'true',
+    ),
+),
+);
+    
+    $loop = new WP_Query( $args ); 
+    ?>
+	    
+
+	<ul class="list-group">
+<?php if ( $loop->have_posts() ) : ?>
+<div class="row">
+<?php while ($loop->have_posts() ) :$loop->the_post(); ?>
+<div class="col-md-4">
+
+<li class="list-group-item"><i class="fas fa-caret-left"></i>
+<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+</div>
+<?php endwhile; ?>
+</div>
+</ul>
+ 
+</div>
+
+
+<section>
+</div>
+
+  <?php wp_reset_postdata();?>
+      <?php endif ?>
+
+								</div>
+
 
 
 <?php get_footer(); ?>

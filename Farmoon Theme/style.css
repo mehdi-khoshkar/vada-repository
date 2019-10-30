@@ -40,6 +40,10 @@ font-style : normal;
 	font-family: IRANSans;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
 body{
 	direction: rtl;
 	font-family: IRANSans;
@@ -499,9 +503,9 @@ color: #02b1b1;
 }
 
 
-.card-text {
+/* .card-text {
     min-height: 32vh;   
-}
+} */
 
 .rate-post {
     display: inline-block;
@@ -648,6 +652,7 @@ div#n2-ss-2 .n2-font-1103-link a{
 
 .entry-content p {
     line-height: 2;
+    text-align: right;
 }
 
 .entry-meta a {
@@ -800,10 +805,12 @@ margin-bottom: 40px;
     }
 
 .table-responsive {
-    display: inline-table;
-	width:100% !important;
+    width:100% !important;
+
  
 }
+
+
 
 
 @media only screen and (max-width:320px){
@@ -824,6 +831,11 @@ img.brand-img.category-price {
     width: 60px !important;
 }
 
+.results td:nth-child(2) {
+    width: 170px;
+    display: inline-block;
+}
+
 .card.category-price {
     margin-top: 85px;
 }
@@ -838,7 +850,19 @@ img.brand-img.category-price {
 }
 	
 
-	
+.rate-post {
+    display: inline-block;
+    float: unset;
+    margin: 15px;
+}
+
+.car-price table {
+    display: inline-block !important;
+}
+
+#search_table {
+    width: 100% !important;
+}
 	.thubmnail-single {
      width:100%;
 		height: auto;
@@ -879,6 +903,14 @@ img.brand-img.category-price {
 }
 @media only screen and (max-width : 768px)
 {
+	
+	.owl-special-single .owl-nav {
+    display: none;
+}
+	.owl-theme .owl-nav{
+		    display: none;
+
+	}
 .thubmnail-single {
     height: auto;
     width: 100%;
@@ -942,7 +974,12 @@ img.brand-img.category-price {
     padding: 10px;
     display: inline;
 }
-	
+    
+iframe {
+    margin-top: 82px;
+    height: 460px !important;
+}
+
 	.btn-popup {
 
     width: 100% !important;
@@ -1247,9 +1284,6 @@ li#nav_menu-2 {
     margin: 2em 0 2.5em !important;
 }
 
-iframe {
-    width: 100%;
-}
 
 .panel-heading {
      background-color: #03bcb4;
@@ -1424,3 +1458,302 @@ img.brand-img.category-price {
 .brand-car.category-price {
     margin: 0;
 }
+
+
+.box-price-page .panel.box-download-farmoon {
+  
+    background-color: #d0ffff;
+}
+
+.btn-top-price {
+    text-align: center;
+}
+
+img.img-preload {
+    width: 30px;
+}
+
+.message_box_searchModel , .message_box_android ,.message_box_ios,.message_box_search {
+    text-align: center;
+}
+
+button#searchPriceBtn {
+    margin-top: 15px;
+}
+
+.searchPriceBtn {
+    text-align: center;
+}
+
+
+
+.swal-wide{
+    width:400px !important;
+}
+
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+ 
+    font-size: 40px;
+}
+
+button.owl-prev {
+    float: right;
+    position: relative;
+    right: -30px;
+}
+
+button.owl-next {
+    float: left;
+    position: relative;
+    left: -30px;
+}
+
+.owl-theme .owl-nav {
+    margin-top: 10px;
+    position: relative;
+    top: -30px;
+}
+
+section.special_post {
+    padding: 7px;
+    margin-top: 64px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+
+section.special_post i.fas.fa-star {
+    color: #ffc108;
+}
+
+.owl-dots {
+    display: none;
+}
+
+.title-special-post {
+    margin-top: 15px;
+}
+
+h2.spicial-title {
+    font-size: 24px;
+}
+
+.wp-embed a:hover {
+    text-decoration: none;
+    color: #01b1b1;
+}
+
+.owl-post button.owl-prev {
+    position: absolute;
+    right: -40px;
+    top: -400px;
+	display:none !important;
+}
+
+
+.owl-post button.owl-next {
+    position: absolute;
+    left: -40px;
+    top: -400px;
+}
+
+
+.list-group-item {
+  padding:0;
+    margin: 10px;
+    background-color: unset;
+    border: unset;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    margin: 20px;
+    background-color: unset;
+    border: unset;
+}
+
+.special-post h2 {
+    text-align: center;
+	font-size: 24px;
+}
+
+.special-post a {
+    color: #000;
+	    font-size: 14px;
+}
+.special-post a:hover {
+    color: #01b1b1;
+}
+
+
+
+.special-post {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.special-post i.fas.fa-caret-left {
+    color: #01b1b1;
+}
+
+.special-post ul.list-group {
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.owl-special-single .owl-nav {
+    margin-top: 10px;
+    position: relative;
+    top: -204px;
+}
+
+
+#main-blog-tag .entry-content.col-md-8 {
+    text-align: justify;
+}
+
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 12px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;  
+    background-color: #ffffff; 
+}
+
+li#nav_menu-3 li{
+    background-color: #01b1b1 !important;
+        display: inline-block;
+        margin-left: 5px;
+}
+
+
+li#nav_menu-3 li a{
+color: #fff !important;
+}
+
+li#nav_menu-3 li a:hover{
+    color: #000 !important;
+}
+
+section#arshive .owl-theme .owl-nav{
+    margin-top: 10px;
+    position: relative;
+    top: -160px;
+}
+
+
+div#ez-toc-container p.ez-toc-title {
+    text-align: right;
+}
+
+
+#main-blog .table-responsive {
+    display: inline-table;
+}
+
+ #sidebar-blog .table-responsive{
+    display: inline-table;
+}
+
+
+.results tr[visible='false'],
+.no-result{
+  display:none;
+}
+
+.results tr[visible='true']{
+  display:table-row;
+}
+
+.counter{
+  padding:8px; 
+  color:#ccc;
+}
+
+#search_table {
+    width: 50%;
+    border: 2px solid #01b1b1;
+}
+
+#main-blog .entry-content {
+    margin-bottom: 30px;
+}
+
+section#main-blog-tag {
+    margin-top: 85px;
+}
+
+
+.car-price table {
+    display: inline-table;
+}
+
+
+.p_t_list li .date {
+    color: #ffffff;
+    font-size: 14px;
+    width: 130px;
+    background: #02b1b1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    line-height: 50px;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.p_t_list li {
+    border-bottom: 1px solid #dddddd;
+    direction: rtl;
+    padding: 15px;
+    text-align: right;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    padding-right: 140px;
+}
+
+.p_t_list li:hover {
+    background: #f5f5f5;
+}
+.no-pad {
+    padding: 0!important;
+    border-radius: 5px;
+    border-left: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+}
+
+.heading-default {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    text-align: center;
+}
+
+
+.blink {
+    -webkit-animation: blink 2s step-end infinite;
+            animation: blink 2s step-end infinite;
+}
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+        @keyframes blink { 50% { visibility: hidden; }}
+    

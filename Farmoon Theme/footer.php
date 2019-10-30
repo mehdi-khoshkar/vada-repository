@@ -31,11 +31,12 @@
 				  </div>
 					<center>
 						<div class="enemad">
-										<script src="https://cdn.zarinpal.com/trustlogo/v1/trustlogo.js" type="text/javascript"></script>
-						
-				<img src="https://trustseal.enamad.ir/logo.aspx?id=127410&amp;p=NbRalsyg6g3davw1" alt="" onclick="window.open(&quot;https://trustseal.enamad.ir/Verify.aspx?id=127410&amp;p=NbRalsyg6g3davw1&quot;, &quot;Popup&quot;,&quot;toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30&quot;)" style="cursor:pointer" id="NbRalsyg6g3davw1">
-							
-										<img id = 'jxlzwlaojzpergvjjzpejzpe' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=147377&p=rfthaodsjyoexlaojyoejyoe", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://logo.samandehi.ir/logo.aspx?id=147377&p=nbpdshwlyndtqftiyndtyndt' />
+						<a href="https://farmooon.com/%d9%86%d9%85%d8%a7%d8%af/">
+			                 <img src="https://farmooon.com/wp-content/uploads/2019/09/logo-enemad.png" />
+							 <img src="https://farmooon.com/wp-content/uploads/2019/09/logo-samandehi.png" />
+							 <img src="https://farmooon.com/wp-content/uploads/2019/09/zarinpal.jpg" />
+
+                                </a>
 							
 						</div>
 		
@@ -69,36 +70,26 @@ AOS.init({
 
 });
 		  
-		  // ===== Scroll to Top ==== 
-jQuery(window).scroll(function() {
-    if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 200px
-        $('#return-to-top').fadeIn(200);    // Fade in the arrow
-    } else {
-        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-    }
-});
-$('#return-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
-    }, 500);
-});
+
 		  </script>
 
 
-<script type="text/javascript">
-function closePopup() {
-		  
-
-    document.getElementById("sgpb-popup-dialog-main-div-wrapper").style.display = "none";
-$('.sgpb-theme-6-overlay').hide();
 
 
-jQuery("html").removeClass("sgpb-overflow-hidden");
+	<script type="text/javascript">
 
+
+function popup_close(){
+ //insert your code here
+ console.log('ok');
+	swal.close();	
 
 }
-	
+
+
 jQuery(document).ready(function($){
+	
+
 	var deviceAgent = navigator.userAgent.toLowerCase();
 	var isiphone = deviceAgent.match(/(iphone|ipod|ipad)/);
 	var isAndroid = deviceAgent.match(/android/);
@@ -106,24 +97,22 @@ jQuery(document).ready(function($){
 	
 	if (isiphone) {
 console.log(isiphone);
-         $('.sgpb-main-html-content-wrapper a[href^="http://"]').each(function(){ 
-            var oldUrl = $(this).attr("href"); // Get current url
-            var newUrl = oldUrl.replace("http://uzee.ir/farmooonir", "http://uzee.ir/sibche"); // Create new url
-            $(this).attr("href", newUrl); // Set herf value
-			 $(this).attr("onclick","return gtag_report_conversion('http://uzee.ir/sibche')"); 
-        });
-		     $('#main-blog a[href^="http://"]').each(function(){ 
-            var oldUrl = $(this).attr("href"); // Get current url
-            var newUrl = oldUrl.replace("http://uzee.ir/farmooonir", "http://uzee.ir/sibche"); // Create new url
-            $(this).attr("href", newUrl); // Set herf value
-				 			 $(this).attr("onclick","return gtag_report_conversion('http://uzee.ir/sibche')"); 
+		 
 
-        });
-		     $('.ads-farmooon-app a[href^="http://"]').each(function(){ 
+ 
+		
+		//      $('#main-blog a[href^="https://"]').each(function(){ 
+        //     var oldUrl = $(this).attr("href"); // Get current url
+        //     var newUrl = oldUrl.replace("https://uzee.ir/farmooonir", "https://uzee.ir/sibche"); // Create new url
+        //     $(this).attr("href", newUrl); // Set herf value
+		// 		 			 $(this).attr("onclick","return gtag_report_conversion('http://uzee.ir/sibche')"); 
+
+        // });
+		     $('.ads-farmooon-app a[href^="https://"]').each(function(){ 
             var oldUrl = $(this).attr("href"); // Get current url
-            var newUrl = oldUrl.replace("http://uzee.ir/farmooonir3", "http://uzee.ir/sibche"); // Create new url
+            var newUrl = oldUrl.replace("https://uzee.ir/farmooonir3", "https://uzee.ir/sibche"); // Create new url
             $(this).attr("href", newUrl); // Set herf value
-				 			 $(this).attr("onclick","return gtag_report_conversion('http://uzee.ir/sibche')"); 
+				 			 $(this).attr("onclick","return gtag_report_conversion('https://uzee.ir/sibche')"); 
 
         });
 		
@@ -133,44 +122,42 @@ console.log(isiphone);
 		
  
 	}
+					
 		if (isAndroid) {
 			
 	 $('.btn-box-download .ios').hide(); 
 			 $('.btn-box-download button').hide(); 
 			
 			
-			      $('.sgpb-main-html-content-wrapper a[href^="http://"]').each(function(){ 
-          
-			 $(this).attr("onclick","return gtag_report_conversion('http://uzee.ir/farmooonir')"); 
-        });
-		     $('#main-blog a[href^="http://"]').each(function(){ 
+	
+		//      $('#main-blog a[href^="https://"]').each(function(){ 
 
-				 			 $(this).attr("onclick","return gtag_report_conversion('http://uzee.ir/farmooonir')"); 
+		// 		 			 $(this).attr("onclick","return gtag_report_conversion('https://uzee.ir/farmooonir')"); 
 
-        });
-		     $('.ads-farmooon-app a[href^="http://"]').each(function(){ 
+        // });
+		     $('.ads-farmooon-app a[href^="https://"]').each(function(){ 
           
-				 			 $(this).attr("onclick","return gtag_report_conversion('http://uzee.ir/farmooonir')"); 
+				 			 $(this).attr("onclick","return gtag_report_conversion('https://uzee.ir/farmooonir')"); 
 
         });
 
 		}
-	
+															  
+															  
 	if(!(isAndroid || isiphone)){
-		      $('.sgpb-main-html-content-wrapper a[href^="http://"]').each(function(){ 
-            var oldUrl = $(this).attr("href"); // Get current url
-            var newUrl = oldUrl.replace("http://uzee.ir/farmooonir", ""); // Create new url
-            $(this).attr("href", newUrl); // Set herf value
-				 $('.sgpb-main-html-content-wrapper a').attr("data-toggle","modal");
-				  $('.sgpb-main-html-content-wrapper a').attr("data-target","#basicExampleModal");
-			 
-        });
+		  
+	
 				  		 $('.btn-box-download .android').hide(); 
 				  $('.btn-box-download .ios').hide(); 
 	}
 	
 });
+;
+									
 </script>
+
+
+
 
 </body>
 

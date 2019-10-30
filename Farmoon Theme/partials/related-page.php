@@ -1,26 +1,58 @@
 <?php
-//for use in the loop, list 5 post titles related to first tag on current post
-$tags = wp_get_post_tags($post->ID);
-if ($tags) {
 
-$first_tag = $tags[0]->term_id;
-$args=array(
-'tag__in' => array($first_tag),
-'post__not_in' => array($post->ID),
-'posts_per_page'=>4,
-'caller_get_posts'=>1
+   $categories = get_the_category();
+
+if($categories[1]->cat_ID)
+{
+   $category_id = $categories[1]->cat_ID;
+
+}
+
+
+else
+{
+  $category_id = $categories[0]->cat_ID;
+
+} 
+
+
+    $args = array (
+'post_type'              => array( 'post' ),
+'post_status'            => array( 'publish' ),
+'cat'                    => array($category_id),
+'meta_query'             => array(
+    array(
+        'key'       => 'meta-box-checkbox',
+        'value'     => 'true',
+    ),
+),
 );
-$my_query = new WP_Query($args); ?>
-    <!-- Grid row -->
+$my_query = new WP_Query($args); 
 
+if( !$my_query->have_posts() ){
+    $args_main = array (
+        'post_type'              => array( 'post' ),
+        'post_status'            => array( 'publish' ),
+        'cat'                    => array(8),
+        'meta_query'             => array(
+            array(
+                'key'       => 'meta-box-checkbox',
+                'value'     => 'true',
+            ),
+        ),
+        );
+        $my_query = new WP_Query($args_main); 
 
+} 
 
+?>
     <?php
-	
+    
+    if(!is_single(303)){
 	if( $my_query->have_posts() ) { ?>
 
             <div class="panel-heading">
-                <h3>مطالب مرتبط</h3>
+                <h3>مطالب ویژه</h3>
             </div>
 
             <?php }
@@ -28,21 +60,19 @@ $my_query = new WP_Query($args); ?>
 
                 <?php
 if( $my_query->have_posts() ) { ?>
-			
-			            <div class="panel-body row">
-
 	
+
+	    <div class="owl-carousel owl-special-single owl-theme">
 
 	  
 <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-                    <!-- Grid column -->
-                    <div class="col-lg-3 col-md-3 col-xs-12 mb-lg-0 mb-4 ">
+                    <div class="item">
                        <div class="card">
                             <!-- Featured image -->
                             <div class="view overlay rounded z-depth-2 mb-4">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-                                    <?php the_post_thumbnail('array(150, 150)', ['class' => 'card-img-top']); ?>
+                                <?php  the_post_thumbnail( 'thumbnail', ['class' => 'card-img-top'] ); ?>
                                 </a>
                             </div>
                             <div class="card-body">
@@ -60,7 +90,6 @@ if( $my_query->have_posts() ) { ?>
                         </div>
 
                     </div>
-                    <!-- Grid column -->
 
 
 
@@ -69,112 +98,10 @@ endwhile;
 	?>
             </div>
         <?php
+
 }
-	else { 	  echo '<div class="panel-heading"><h3>مطالب پربازدید</h3></div>';
- ?>
-
-<div class="panel-body row">
-
-            <!-- Grid column -->
-            <div class="col-lg-3 col-md-3 col-xs-12 mb-lg-0 mb-4 ">
-
-
-                <div class="card">
-                    <!-- Featured image -->
-                    <div class="view overlay rounded z-depth-2 mb-4">
-                        <a href="https://farmooon.com/?p=303" rel="bookmark" title="۷روش سریع استعلام و پرداخت جریمه و خلافی خودرو">
-<img width="150" height="150" src="https://farmooon.ir/wp-content/uploads/2018/06/pay-ticket.jpg" class="img-fluid card-img-top wp-post-image" >		  			
-
-			 </a>
-                    </div>
-
-                    <div class="card-body">
-                        <div class="card-title">
-                            <a href="https://farmooon.com/?p=303" rel="bookmark" title="۷روش سریع استعلام و پرداخت جریمه و خلافی خودرو">
-                                <p>
-                                    ۷روش سریع استعلام و پرداخت جریمه و خلافی خودرو
-                                </p>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-lg-3 col-md-3 col-xs-12 mb-lg-0 mb-4 ">
-
-
-
-                <div class="card">
-                    <!-- Featured image -->
-                    <!-- Featured image -->
-                    <div class="view overlay rounded z-depth-2 mb-4">
-                        <a href="https://farmooon.com/?p=502" rel="bookmark" title="خرید طرح ترافیک ۹۸ (روزانه، هفتگی، ماهیانه، سالیانه)">
-<img width="150" height="150" src="https://farmooon.com/wp-content/uploads/2018/07/tarh3.jpg" class="img-fluid card-img-top wp-post-image" >		  			
-
-			 </a>
-                    </div>
-
-                    <div class="card-body">
-                        <div class="card-title">
-
-                            <a href="https://farmooon.com/?p=502" rel="bookmark" title="خرید طرح ترافیک ۹۸ (روزانه، هفتگی، ماهیانه، سالیانه)">
-                                <p>
-                                    خرید طرح ترافیک ۹۸ (روزانه، هفتگی، ماهیانه، سالیانه) </p>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-
-
-
-            </div>
-            <!-- Grid column -->
-
-
-            <!-- Grid column -->
-            <div class="col-lg-3 col-md-3 col-xs-12 mb-lg-0 mb-4 ">
-
-
-                <div class="card">
-                    <!-- Featured image -->
-                    <div class="view overlay rounded z-depth-2 mb-4">
-                        <a href="https://farmooon.com/?p=364" rel="bookmark" title="استعلام و پرداخت خلافی موتور سیکلت با VIN
-">
-<img width="150" height="150" src="https://farmooon.com/wp-content/uploads/2018/07/motor.jpg" class="img-fluid card-img-top wp-post-image" >		  			
-
-			 </a>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">
-
-                            <a href="https://farmooon.com/?p=364" rel="bookmark" title="استعلام و پرداخت خلافی موتور سیکلت با VIN">
-                                <p> استعلام و پرداخت خلافی موتور سیکلت با VIN
-                                </p>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-            <!-- Grid column -->
-	
-</div>
-
-
-            <?php } 
 wp_reset_query();
-}
+
+    }
+	
 ?>

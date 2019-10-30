@@ -1,4 +1,4 @@
-jQuery('ul.nav li.dropdown').hover(function() {
+﻿jQuery('ul.nav li.dropdown').hover(function() {
   jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
 }, function() {
   jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
@@ -169,10 +169,170 @@ $('#getCarPrice #searchPriceBtn').click(function(e){
   });
   })
 
+});
 
-  
+
+jQuery(document).ready(function(){
+  $('.owl-special').owlCarousel({
+    loop:true,
+	  rtl:true,
+    margin:10,
+    responsiveClass:true,
+	  lazyLoad: true,
+    nav: true,
+    dot:false,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1,
+            
+            
+        },
+        600:{
+            items:3,
+        },
+        1000:{
+            items:6,
+           
+            
+        }
+    }
+});
+
+	  $('.owl-post').owlCarousel({
+    loop:true,
+	  rtl:true,
+	  nav:true,
+		  lazyLoad: true,
+    margin:10,
+	      autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            
+        },
+        600:{
+            items:3,
+        },
+        1000:{
+            items:4,
+           
+            
+        }
+    }
+});	
+	
+		  $('.owl-special-single').owlCarousel({
+    loop:true,
+	  rtl:true,
+	  nav:true,
+		  lazyLoad: true,
+    margin:10,
+	      autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            
+        },
+        600:{
+            items:3,
+        },
+        1000:{
+            items:4,
+           
+            
+        }
+    }
+});	
 
 });
 
 
 
+
+
+jQuery(document).ready(function() {
+
+setTimeout(function(){
+$(".search_table").keyup(function () {
+    var searchTerm = $(".search_table").val();
+    var listItem = $('.results tbody').children('tr');
+    var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+    
+  $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
+        return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+    }
+  });
+    
+  $(".results tbody tr").not(":containsi('" + searchSplit + "')").each(function(e){
+    $(this).attr('visible','false');
+  });
+
+  $(".results tbody tr:containsi('" + searchSplit + "')").each(function(e){
+    $(this).attr('visible','true');
+  });
+
+  var jobCount = $('.results tbody tr[visible="true"]').length;
+    $('.counter').text(jobCount + ' item');
+
+  if(jobCount == '0') {$('.no-result').show();}
+    else {$('.no-result').hide();}
+		  });
+});
+
+}, 2000);
+
+
+
+        jQuery(function () {
+            $('[id*=search_table]').keyup(function (e) {
+                var ctrlKey = 67, vKey = 86;
+                if (e.keyCode != ctrlKey && e.keyCode != vKey) {
+                    $('[id*=search_table]').val(EnglishToPersian($(this).val()));
+                }
+            });
+
+        });
+
+ 
+        function EnglishToPersian(input) {
+            var inputstring = input;
+            var persian = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"]
+            var english = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            for (var i = 0; i < 10; i++) {
+                var regex = new RegExp(english[i], 'g');
+                inputstring = inputstring.toString().replace(regex, persian[i]);
+            }
+            return inputstring;
+        }
+
+
+        jQuery(function () {
+            $('[id*=hashtraghami]').keyup(function (e) {
+                var ctrlKey = 67, vKey = 86;
+                if (e.keyCode != ctrlKey && e.keyCode != vKey) {
+                    $('[id*=hashtraghami]').val(PersianToEnglish($(this).val()));
+                }
+            });
+
+        });
+
+ 
+        function PersianToEnglish(input) {
+            var inputstring = input;
+            var persian = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"]
+            var english = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            for (var i = 0; i < 10; i++) {
+                var regex = new RegExp(persian[i], 'g');
+                inputstring = inputstring.toString().replace(regex, english[i]);
+            }
+            return inputstring;
+        }

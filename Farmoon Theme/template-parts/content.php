@@ -13,9 +13,7 @@ else
 {
 	  $category_id = $categories[1]->cat_ID;
 
-}
-
-	
+} 
 
 	  	$args = array('post_type' => 'post','posts_per_page' => 9,'cat'=>$category_id);
 			
